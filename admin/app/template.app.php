@@ -282,8 +282,8 @@ class TemplateApp extends BackendApp
             return false;
         }
 
-        return file_get_contents($pages[$page]);
-        /*
+        //return file_get_contents($pages[$page]);
+        
         $ch = curl_init();
         curl_setopt ($ch, CURLOPT_URL, $pages[$page]);
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1); 
@@ -291,7 +291,7 @@ class TemplateApp extends BackendApp
         $file_contents = curl_exec($ch);
         curl_close($ch);
         return $file_contents;
-         */
+         
 
     }
 
