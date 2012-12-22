@@ -1,11 +1,12 @@
 /* spec对象 */
-function spec(id, spec1, spec2, price, stock)
+function spec(id, spec1, spec2, price, stock,sku)
 {
     this.id    = id;
     this.spec1 = spec1;
     this.spec2 = spec2;
     this.price = price;
     this.stock = stock;
+    this.sku   = sku;
 }
 
 /* goodsspec对象 */
@@ -123,9 +124,10 @@ function selectSpec(num, liObj)
     {
         var spec = goodsspec.getSpec();
         if (spec != null)
-        {
+        {   
+        	$("[ectype='sku']").html(spec.sku);
             $("[ectype='current_spec']").html(spec.spec1 + ' ' + spec.spec2);
-            $("[ectype='goods_price']").html(price_format(spec.price));
+            $("[ectype='goods_price1']").html(price_format(spec.price));
             $("[ectype='goods_stock']").html(spec.stock);
         }
     }
