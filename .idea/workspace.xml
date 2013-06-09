@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/external/widgets/floors/widget.html" afterPath="$PROJECT_DIR$/external/widgets/floors/widget.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/external/widgets/floors/main.widget.php" afterPath="$PROJECT_DIR$/external/widgets/floors/main.widget.php" />
     </list>
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="widget.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="widget.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/external/widgets/floors/widget.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="152" selection-start="2537" selection-end="2537" vertical-scroll-proportion="0.6660714">
+            <state line="27" column="152" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-14.346154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/external/widgets/floors/config.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="0" selection-start="5621" selection-end="5621" vertical-scroll-proportion="-12.384615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.widget.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/external/widgets/floors/main.widget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="18" selection-start="186" selection-end="186" vertical-scroll-proportion="0.17801048">
               <folding />
             </state>
           </provider>
@@ -58,6 +76,7 @@
         <option value="$PROJECT_DIR$/webroot/themes/mall/myview/styles/default/css/mystyle.css" />
         <option value="$PROJECT_DIR$/webroot/themes/mall/myview/search.goods.html" />
         <option value="$PROJECT_DIR$/external/widgets/floors/widget.html" />
+        <option value="$PROJECT_DIR$/external/widgets/floors/main.widget.php" />
       </list>
     </option>
   </component>
@@ -192,7 +211,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.912" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -291,7 +310,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/external/widgets/floors/widget.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="152" selection-start="2537" selection-end="2537" vertical-scroll-proportion="0.6660714">
+        <state line="27" column="152" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-14.346154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/external/widgets/floors/config.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="5621" selection-end="5621" vertical-scroll-proportion="-12.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/external/widgets/floors/main.widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="18" selection-start="186" selection-end="186" vertical-scroll-proportion="0.17801048">
           <folding />
         </state>
       </provider>

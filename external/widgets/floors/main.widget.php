@@ -10,7 +10,7 @@ class FloorsWidget extends BaseWidget
 {
     var $_name = 'floors';
     var $_ttl  = 86400;
-    var $_num  = 8;
+    var $_num  = 13;
 
     /**
      * 渲染插件
