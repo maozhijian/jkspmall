@@ -1,0 +1,187 @@
+{include file="header.html"}
+
+<script type="text/javascript">
+$(function(){
+    $('#login_form').validate({
+        errorPlacement: function(error, element){
+            $(element).parent('td').append(error); 
+        },
+        success       : function(label){
+            label.addClass('validate_right').text('OK!');
+        },
+        onkeyup : false,
+        rules : {
+            user_name : {
+                required : true
+            },
+            password : {
+                required : true
+            },
+            captcha : {
+                required : true,
+                remote   : {
+                    url : 'index.php?app=captcha&act=check_captcha',
+                    type: 'get',
+                    data:{
+                        captcha : function(){
+                            return $('#captcha1').val();
+                        }
+                    }
+                }
+            }
+        },
+        messages : {
+            user_name : {
+                required : '{$lang.user_name_required}'
+            },
+            password  : {
+                required : '{$lang.password_required}'
+            },
+            captcha : {
+                required : '{$lang.captcha_required}',
+                remote   : '{$lang.captcha_error}'
+            }
+        }
+    });
+});
+</script>
+
+<div class="content">
+    <div id="content-left">
+    </div>
+    <div id="content-main">
+        {include file="curlocal.html"}
+        <div class="content-main-login">
+            <div class="login_left" >
+                <form method="post" id="login_form" class="form-signin form-horizontal">
+
+                    <div class="control-group">
+                        <label class="control-label" for="name">
+                            <b class="register" title="JOIN US{$lang.user_register}">登录名 ： </b>
+                        </label>
+                        <input type="text" class="" name="user_name" placeholder="账户">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="name">
+                            <b class="register" title="JOIN US{$lang.user_register}">密码 ： </b>
+                        </label>
+                        <input type="password" class="" name="password" placeholder="密码">
+                        <a href="{url app=find_password}" class="forget-password">{$lang.forget_password}</a>
+                    </div>
+
+                    <!--{if $captcha}-->
+                    <div class="control-group">
+                        <label class="control-label" for="name">
+                            <b class="register" title="JOIN US{$lang.user_register}">验证 ： </b>
+                        </label>
+                        <input type="text" name="captcha" class="text" id="captcha1" />
+                        <span><a href="javascript:change_captcha($('#captcha'));" class="renewedly"><img id="captcha" src="index.php?app=captcha&amp;{$random_number}" /></a></span>
+                    </div>
+                    <!--{/if}-->
+                    <div class="control-group">
+                        <label class="control-label" for="name">
+                        </label>
+                        <input type="hidden" name="ret_url" value="{$ret_url}" />
+                        <input type="submit" name="Submit" class="btn btn-info" value="登录" class="enter" />
+                        <a href="{url app=member&act=register&&ret_url=$ret_url}" class="clew">立即注册</a>
+                    </div>
+
+
+                </form>
+            </div>
+            <!--
+            <div class="test-login">
+            <form>
+                <p class="login">登录</p>
+
+                <table class="tablelogin">
+                    <tr class="nametr"><td class="nametd"><b class="nameb">账户</b></td><td class="nameframe"><input class="name" type="text"  name="user_name" placeholder="手机号或邮箱"></td><td></td></tr>
+                    <tr><td class="passwordtd"><b class="passwordb">密码</b></td><td><input class="password" type="password" name="password" placeholder="至少9位数字或字母"></td><td class="forgettd"><a class="forgeta" href="#">忘记密码？</a></td></tr>
+                    <tr><td></td><td><table><tr><td><input class="enter" type="submit" name="Submit" value="登录" class="enter" /></td><td class="logintd"><a href="#">立即注册</a></td></tr></table></td></tr>
+                </table>
+            </form>
+            -->
+        </div>
+        </div>
+
+        <!--
+        <style>
+                a.forgeta
+                {
+                color:rgb(177, 177, 177);
+                text-decoration: none;
+                }
+                p.login
+                {
+                    font-size: 40px;
+                    margin-left: 87px;
+                    margin-top: 152px;
+                }
+                td.forgettd
+                {
+                   width: 100px;
+                   padding-left: 15px;
+                    padding-top: 8px;
+                }
+                td.logintd
+                {
+                   padding-left: 81px;
+                   padding-top: 21px;
+                }
+                table.tablelogin
+                {
+                    margin-top: 34px;
+                    width: 507px;
+                    margin-left: 93px;
+                }
+                tr.nametr
+                {
+                    width: 360px;
+                }
+
+                td.nameframe
+                {
+                    width: 300px;
+                }
+                td.nametd
+                {
+                    padding-top: 18px;
+                }
+
+                td.passwordtd
+                {
+                    padding-top: 7px;
+                }
+
+                input.name
+                {
+                    width: 300px;
+                    margin-top: 30px;
+
+                }
+                input.password
+                {
+                    width: 300px;
+                    margin-top: 15px;
+                }
+
+                input.enter
+                {
+                    border: 0;
+                    background:#303030 ;
+                    color: rgb(255,255,255);
+                    margin-top: 15px;
+                   width: 105px;
+                }
+                .content-main-login input {
+                    max-width: 1500px;
+                }
+                .content-main-login input {
+                    max-width: 1500px;
+                }
+        </style>
+        -->
+        {include file="footer.html"}
+    </div>
+</div>
+

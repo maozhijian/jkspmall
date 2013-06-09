@@ -1,0 +1,19 @@
+<div class="best-item-part">
+    <h2><b class="best_item" title="Best精品">精品推荐 Best</b></h2>
+    <ul class="list_pic">
+        <!--{foreach from=$widget_data item=goods}-->
+        <li class="best-img">
+            <p><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.default_image}" /></a></p>
+            <h3><p class="text-center">{$goods.goods_name|escape}</p></h3>
+        </li>
+        <!--{/foreach}-->
+   </ul>
+    <script type="text/javascript">
+        $('.best-img').mouseenter(function(){
+            $(this).find('h3').fadeIn();
+        });
+        $('.best-img').mouseleave(function(){
+            $(this).find('h3').fadeOut();
+        });
+    </script>
+</div>

@@ -1,0 +1,72 @@
+{include file=header.html}
+
+<script type="text/javascript">
+//<!CDATA[
+$(function(){
+    $("select[ectype='order_by']").change(function(){
+        var params = location.search.substr(1).split('&');
+        var key    = 'order';
+        var value  = this.value;
+        var found  = false;
+        for (var i = 0; i < params.length; i++)
+        {
+            param = params[i];
+            arr   = param.split('=');
+            pKey  = arr[0];
+            if (pKey == 'page')
+            {
+                params[i] = 'page=1';
+            }
+            if (pKey == key)
+            {
+                params[i] = key + '=' + value;
+                found = true;
+            }
+        }
+        if (!found)
+        {
+            params.push(key + '=' + value);
+        }
+        location.assign(SITE_URL + '/index.php?' + params.join('&'));
+    });
+});
+//]]>
+</script>
+
+
+<div id="content">
+    <div id="left">
+        {include file=left.html}
+    </div>
+    
+    <div id="right">
+        {include file=curlocal.html}
+        {include file=top.html}
+        <div class="content-main-goods-list">
+            <div class="shop_con_list">
+                <h2 class="common_title veins2"> {$search_name|escape} </h2>
+                <!--{if $searched_goods}-->
+                <ul class="list_pic">
+                    <!--{foreach from=$searched_goods item=sgoods}-->
+                    <li>
+                        <dl>
+                            <dt> <p class="text-center"> <a href=" class="pic"><a href="{url app=goods&id=$sgoods.goods_id}" target="_blank"><img src="{$sgoods.default_image}" /></a> </p> </dt>
+                            <dd><p class="text-center list-goods-price"><span style="color:#999">参考价格: </span>{$sgoods.price|price}</p></dd>
+                            <dd><p class="text-center list-goods-name"><a href="{url app=goods&id=$sgoods.goods_id}" target="_blank">{$sgoods.goods_name|escape}</a></p> </dd>
+                        </dl>
+                    </li>
+                    <!-- {/foreach} -->
+                </ul>
+                <!--{else}-->
+                <div class="nothing"><p>{$lang.no_records}</p></div>
+                <!--{/if}-->
+                    </div>
+                    {include file=page.bottom.html}
+                </div>
+                {include file=footer.html}
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+

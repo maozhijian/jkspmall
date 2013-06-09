@@ -1,0 +1,46 @@
+<!--{if $payform.online}-->
+  <h3>{$lang.connecting_pay_gateway}</h3>
+  <form action="{$payform.gateway}" id="payform" method="{$payform.method}" style="display:none">
+  <!-- {foreach from=$payform.params item=value key=_k} -->
+    <input type="hidden" name="{$_k}" value="{$value}" />
+  <!-- {/foreach} -->
+  </form>
+  <script type="text/javascript">
+      document.getElementById('payform').submit();
+  </script>
+{else}
+{include file="header.html"}
+<style type="text/css">
+.payment_desc { margin:10px 10px 20px 10px; background:#eee; padding:5px; }
+.payment_desc h3 { margin:5px; border-bottom:#ddd 1px dotted; padding-bottom:5px; }
+.payment_desc .detail { text-indent:2em; }
+.table_form { margin:0px 10px; }
+.table_form td { padding:5px; }
+.table_form .desc { color:#888; font-style:italic; }
+</style>
+<div id="content">
+    <div id="content-left"></div>
+    <div id="content-main">
+        {include file="curlocal.html"}
+        <div class="flow_chart">
+            <div class="pos_x1 bg_a2" title="{$lang.shopping_step_one}"></div>
+            <div class="pos_x2 bg_b2" title="{$lang.shopping_step_two}"></div>
+            <div class="pos_x3 bg_c1" title="{$lang.shopping_step_three}"></div>
+        </div>
+        <div class="payment_desc">
+            <h3>{$lang.payment_desc}</h3>
+            <p class="text-left">{$payform.desc} </p>
+        </div>
+        <form id="pay_message_form" action="index.php?app=cashier&act=offline_pay&order_id={$order.order_id}" method="POST">
+            <p><h3>{$lang.input_pay_message} <span class="desc">({$lang.input_pay_message_notice})</span></h3></p>
+            <p><textarea name="pay_message"  rows="3" style="width: 920px">{$order.pay_message|escape}</textarea></p>
+         <div class="make_sure">
+             <p class="text-right">
+                <input type="submit" class="btn" value="{$lang.submit}" />
+             </p>
+         </div>
+        </form>
+    </div>
+</div>
+{include file="footer.html"}
+<!--{/if}-->

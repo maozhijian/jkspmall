@@ -1,0 +1,94 @@
+<script type="text/javascript">
+$(function(){
+    $('#category_form').validate({
+/*        errorPlacement: function(error, element){
+            var _message_box = $(element).parent().parent().parent().parent().find('#warning');
+            _message_box.find('#warning_info').hide();
+            _message_box.append(error);
+        },
+        success       : function(label){
+            label.addClass('validate_right').text('OK!');
+        },*/
+        errorLabelContainer: $('#warning'),
+        invalidHandler: function(form, validator) {
+           /*var errors = validator.numberOfInvalids();
+           if(errors)
+           {*/
+               $('#warning').show();
+           /*}
+           else
+           {
+               $('#warning').hide();
+           }*/
+        },
+        onfocusout : false,
+        onkeyup    : false,
+        rules : {
+            cate_name : {
+                required : true,
+                remote   : {
+                url :'index.php?app=my_category&act=check_category',
+                type:'get',
+                data:{
+                    cate_name : function(){
+                        return $('#cate_name').val();
+                    },
+                    parent_id : function() {
+                        return $('#parent_id').val();
+                    },
+                    id : '{$gcategory.cate_id}'
+                  }
+                }
+            },
+            sort_order : {
+                number   : true
+            }
+        },
+        messages : {
+            cate_name : {
+                remote   : '{$lang.name_exist}',
+                required : '{$lang.cate_name_empty}'
+
+            },
+            sort_order  : {
+                number   : '{$lang.number_only}'
+            }
+        }
+    });
+});
+</script>
+<div class="eject_con">
+ <div class="adds">
+        <div id="warning"></div>
+        <h1 style="font-size: 16px; border-bottom: 1px solid #ccc"><b style="color:#303030;"> 编辑分类</b></h1>
+        <form id="category_form" class="form-horizontal" method="post" target="pop_warning" action="index.php?app=my_category&amp;act={$smarty.get.act}<!--{if $smarty.get.id}-->&amp;id={$smarty.get.id}<!--{/if}-->">
+        <ul>
+            <li>
+
+                <p>{$lang.cate_name} : <input class="text width_normal" type="text" name="cate_name" id="cate_name" value="{$gcategory.cate_name|escape}" /><label class="field_notice"></label></p>
+            </li>
+            <li>
+
+                <p>{$lang.parent_id} : <select name="parent_id" id="parent_id">
+                <option>{$lang.select_pls}</option>
+                {html_options options=$parents selected=$gcategory.parent_id}
+                </select></p>
+            </li>
+            <li>
+                 <p>分类{$lang.sort_order} : <input type="text" name="sort_order" value="{$gcategory.sort_order}"  class="text width_short"/></p>
+            </li>
+            <li>
+
+                <p>
+                    是否{$lang.if_show} :
+                 <input type="radio" name="if_show" value="1" {if $gcategory.if_show}checked="checked"{/if} />
+                {$lang.yes}
+                <input style="margin-left:10px;" type="radio" name="if_show" value="0" {if !$gcategory.if_show}checked="checked"{/if} />
+                {$lang.no}
+                </p>
+            </li>
+            <li><input type="submit" class="btn" value="{$lang.submit}" /></li>
+        </ul>
+        </form>
+    </div>
+</div>

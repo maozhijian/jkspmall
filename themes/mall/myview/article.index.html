@@ -1,0 +1,50 @@
+{include file=header.html}
+<div class="content">
+    <div id="content-left"> {include file=left_category.html} </div>
+    <div id="content-main">
+        {include file=curlocal.html}
+        <div class="content-main-head">
+            <div class="content-main-head-goods-category">
+                <!-- 子分类 list -->
+                <h2><b>{$lang.acategory}</b></h2>
+                <div class="side_textlist">
+                    <ul>
+                        <!-- {foreach from=$acategories item=acategory} -->
+                        <li><a href="{url app=article&cate_id=$acategory.cate_id}">{$acategory.cate_name|escape}</a></li>
+                        <!-- {/foreach} -->
+                    </ul>
+                </div>
+            </div>
+            <div class="content-main-head-goods-category">
+                <!-- 子分类 list -->
+                <h2><b>{$lang.new_article}</b></h2>
+                <div class="side_textlist">
+                    <ul>
+                        <!-- {foreach from=$new_articles item=new_article} -->
+                        <li><a {if $new_article.link}target="_blank"{/if} href="{url app=article&act=view&article_id=$new_article.article_id}">{$new_article.title|escape}</a></li>
+                        <!-- {foreachelse} -->
+                        <li>{$lang.no_new_article}</li>
+                        <!-- {/foreach} -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="content-main-content">
+            <ul class="content-main-content-article-ul">
+                <!-- {foreach from=$articles item=article} -->
+                    <li>
+                        <a {if $article.link}target="_blank"{/if} href="{url app=article&act=view&article_id=$article.article_id}" class="lebioa">
+                        <span>{$article.add_time|date:Y-m-d H:i}</span>
+                        {$article.title|escape}
+                        </a>
+                    </li>
+                <!-- {foreachelse} -->
+                  <li>{$lang.no_records}</li>
+                <!-- {/foreach} -->
+            </ul>
+            {include file=page.bottom.html}
+        </div>
+        {include file=footer.html}
+    </div>
+</div>

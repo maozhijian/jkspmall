@@ -1,0 +1,28 @@
+{include file=header.html}
+<div class="content">
+        <div id="content-left">
+            {include file=left_category.html}
+        </div>
+        <div id="content-main">
+            {include file=curlocal.html}
+            <h2><b class="category" title="CATEGORY{$lang.gcategory}"></b></h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <div class="recommend">
+                        <dl class="shop_assort">
+                            <!--{foreach from=$gcategorys item=gcategory}-->
+                            <dt class="bg_color1"><a href="{url app=search&cate_id=$gcategory.id}">{$gcategory.value|escape}</a></dt>
+                            <dd>
+                                <!--{foreach from=$gcategory.children item=child}-->
+                                <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a>
+                                <!--{/foreach}-->
+                            </dd>
+                            <!--{/foreach}-->
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            {include file=footer.html}
+        </div>
+
+</div>

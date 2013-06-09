@@ -1,0 +1,86 @@
+<script type="text/javascript">
+var _d = DialogManager.get('config_dialog');
+_d.setWidth(550);
+_d.setPosition('center');
+</script>
+<div class="field_item">
+    <label>设置名字 :</label>
+    <p> <input type="text" name="floor_name" placeholder="样例：1F 工业专业" value="{$options.floor_name}"> </p>
+</div>
+<div class="field_item">
+    <label>左上角连接 :</label>
+    <p>第1个名字 : <input type="text" name="left_1_name" placeholder="样例: 女装" value="{$options.left_1_name}"> </p>
+    <p>第1个连接 : <input type="text" name="left_1_link" placeholder="样例://www.baidu.com" value="{$options.left_1_link}"> </p>
+    <p>第2个名字 : <input type="text" name="left_2_name" placeholder="样例: 女装" value="{$options.left_2_name}"> </p>
+    <p>第2个连接 : <input type="text" name="left_2_link" placeholder="样例://www.baidu.com" value="{$options.left_2_link}"> </p>
+    <p>第3个名字 : <input type="text" name="left_3_name" placeholder="样例: 女装" value="{$options.left_3_name}"> </p>
+    <p>第3个连接 : <input type="text" name="left_3_link" placeholder="样例://www.baidu.com" value="{$options.left_3_link}"> </p>
+</div>
+<div class="field_item">
+
+    <label>左边五张图片:(<span>支持 gif|jpg|jpeg|png 格式</span>)</label>
+
+    <p>上传1 : <input type="file" name="ad1_image_file" /><input type="hidden" name="ad1_image_url" value="{$options.ad1_image_url}" /></p>
+    <!-- {if $options.ad1_image_url} --><p><img src="{$options.ad1_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接1 : <input type="text" name="ad1_link_url" value="{$options.ad1_link_url}" /></p>
+
+    <p>上传2 : <input type="file" name="ad2_image_file" /><input type="hidden" name="ad2_image_url" value="{$options.ad2_image_url}" /></p>
+    <!-- {if $options.ad2_image_url} --><p><img src="{$options.ad2_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接2 : <input type="text" name="ad2_link_url" value="{$options.ad2_link_url}" /></p>
+
+    <p>上传3 : <input type="file" name="ad3_image_file" /><input type="hidden" name="ad3_image_url" value="{$options.ad3_image_url}" /></p>
+    <!-- {if $options.ad3_image_url} --><p><img src="{$options.ad3_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接3 : <input type="text" name="ad3_link_url" value="{$options.ad3_link_url}" /></p>
+
+    <p>上传4 : <input type="file" name="ad4_image_file" /><input type="hidden" name="ad4_image_url" value="{$options.ad4_image_url}" /></p>
+    <!-- {if $options.ad4_image_url} --><p><img src="{$options.ad4_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接4 : <input type="text" name="ad4_link_url" value="{$options.ad4_link_url}" /></p>
+
+    <p>上传5 : <input type="file" name="ad5_image_file" /><input type="hidden" name="ad5_image_url" value="{$options.ad5_image_url}" /></p>
+    <!-- {if $options.ad5_image_url} --><p><img src="{$options.ad5_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接5 : <input type="text" name="ad5_link_url" value="{$options.ad5_link_url}" /></p>
+
+</div>
+
+<div class="field_item">
+    <label>右边三张图片(<span>支持 gif|jpg|jpeg|png 格式</span>)</label>
+    <p>图片1 : <input type="file" name="ad6_image_file" /><input type="hidden" name="ad6_image_url" value="{$options.ad6_image_url}" /></p>
+    <!-- {if $options.ad6_image_url} --><p><img src="{$options.ad6_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接1 : <input type="text" name="ad6_link_url" value="{$options.ad6_link_url}" /></p>
+    <p>描述1 : <input type="text" name="ad6_desc" value="{$options.ad6_desc}" /></p>
+
+    <p>图片2 : <input type="file" name="ad7_image_file" /><input type="hidden" name="ad7_image_url" value="{$options.ad7_image_url}" /></p>
+    <!-- {if $options.ad7_image_url} --><p><img src="{$options.ad7_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接2 : <input type="text" name="ad7_link_url" value="{$options.ad7_link_url}" /></p>
+    <p>描述2 : <input type="text" name="ad7_desc" value="{$options.ad7_desc}" /></p>
+
+    <p>图片3 : <input type="file" name="ad8_image_file" /><input type="hidden" name="ad8_image_url" value="{$options.ad8_image_url}" /></p>
+    <!-- {if $options.ad8_image_url} --><p><img src="{$options.ad8_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接3 : <input type="text" name="ad8_link_url" value="{$options.ad8_link_url}" /></p>
+    <p>描述3 : <input type="text" name="ad8_desc" value="{$options.ad8_desc}" /></p>
+
+     <p>图片4 : <input type="file" name="ad9_image_file" /><input type="hidden" name="ad9_image_url" value="{$options.ad9_image_url}" /></p>
+    <!-- {if $options.ad9_image_url} --><p><img src="{$options.ad9_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接4 : <input type="text" name="ad9_link_url" value="{$options.ad9_link_url}" /></p>
+    <p>描述4 : <input type="text" name="ad9_desc" value="{$options.ad9_desc}" /></p>
+
+    <p>图片5 : <input type="file" name="ad10_image_file" /><input type="hidden" name="ad10_image_url" value="{$options.ad10_image_url}" /></p>
+    <!-- {if $options.ad10_image_url} --><p><img src="{$options.ad10_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接5 : <input type="text" name="ad10_link_url" value="{$options.ad10_link_url}" /></p>
+    <p>描述5 : <input type="text" name="ad10_desc" value="{$options.ad10_desc}" /></p>
+
+     <p>图片6 : <input type="file" name="ad11_image_file" /><input type="hidden" name="ad11_image_url" value="{$options.ad11_image_url}" /></p>
+    <!-- {if $options.ad11_image_url} --><p><img src="{$options.ad11_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接6 : <input type="text" name="ad11_link_url" value="{$options.ad11_link_url}" /></p>
+    <p>描述6 : <input type="text" name="ad11_desc" value="{$options.ad11_desc}" /></p>
+
+     <p>图片7 : <input type="file" name="ad12_image_file" /><input type="hidden" name="ad12_image_url" value="{$options.ad12_image_url}" /></p>
+    <!-- {if $options.ad12_image_url} --><p><img src="{$options.ad12_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接7 : <input type="text" name="ad12_link_url" value="{$options.ad12_link_url}" /></p>
+    <p>描述7 : <input type="text" name="ad12_desc" value="{$options.ad12_desc}" /></p>
+
+     <p>图片8 : <input type="file" name="ad13_image_file" /><input type="hidden" name="ad13_image_url" value="{$options.ad13_image_url}" /></p>
+    <!-- {if $options.ad13_image_url} --><p><img src="{$options.ad13_image_url}" style="height:70px;" /></p><!-- {/if} -->
+    <p>连接8 : <input type="text" name="ad13_link_url" value="{$options.ad13_link_url}" /></p>
+    <p>描述8 : <input type="text" name="ad13_desc" value="{$options.ad13_desc}" /></p>
+</div>

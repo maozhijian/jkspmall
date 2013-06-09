@@ -1,0 +1,57 @@
+{include file=member.header.html}
+<script type="text/javascript">
+$(function(){
+    $('#email_form').validate({
+        errorPlacement: function(error, element){
+            $(element).next('.field_notice').hide();
+            $(element).after(error);
+        },
+        success       : function(label){
+            label.addClass('validate_right').text('OK!');
+        },
+        rules : {
+            orig_password : {
+                required : true
+            },
+           email : {
+                required   : true,
+                email      : true
+            }
+        },
+        messages : {
+            orig_password : {
+                required : '{$lang.orig_password_empty}'
+            },
+            email : {
+                required   : '{$lang.email_required}',
+                email    : '{$lang.email_invalid}'
+            }
+        }
+    });
+});
+</script>
+<style>
+.borline td { padding:10px 0px; }
+.ware_list th { text-align:left; }
+.bgwhite { background: #FFFFFF;}
+</style>
+<div class="content">
+    {include file=member.menu.html}
+    <div id="right">
+        {include file="curlocal.html"}
+        {include file=member.submenu.html}
+        <div class="eject_con bgwhite">
+            <div class="add">
+                <form method="post" id="email_form">
+                    <ul>
+                        <li> <p>{$lang.orig_password} : <input class="text width_normal" type="password" name="orig_password" /></p> </li>
+                        <li> <p>{$lang.email} : <input class="text width_normal" type="text" name="email" /></p> </li>
+                        <li> <input class="btn" type="submit" value="{$lang.submit}" /> </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        {include file=footer.html}
+    </div>
+    <div class="clear"></div>
+</div>

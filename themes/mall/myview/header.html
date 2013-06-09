@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="{$site_url}/" />
+<!-- Use IE7 mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={$charset}" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+{$page_seo}
+
+<meta name="author" content="www.run-mall.com" />
+<meta name="viewport" content="width=device-width initial-scale=1.0" >
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="{res file=css/bootstrap.min.css }" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{res file=css/font-awesome.min.css }">
+<!--[if IE 7]>
+<link rel="stylesheet" href="{res file=css/font-awesome-ie7.min.css }">
+<![endif]-->
+
+<link href="{res file=css/mystyle.css }" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="index.php?act=jslang"></script>
+<script type="text/javascript" src="{lib file=jquery.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{lib file=ecmall.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{res file=js/nav.js}" charset="utf-8"></script>
+<script type="text/javascript" src="{res file=js/select.js}" charset="utf-8"></script>
+<?php if( $_GET['template'] != 1 ) {?>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{res file=js/bootstrap.min.js } " ></script>
+<script type="text/javascript" src="{res file=js/myjs.js}" charset="utf-8"></script>
+<?php } ?>
+
+<script type="text/javascript">
+//<!CDATA[
+var SITE_URL = "{$site_url}";
+var REAL_SITE_URL = "{$real_site_url}";
+var PRICE_FORMAT = '{$price_format}';
+//]]>
+</script>
+
+{$_head_tags}
+<!--<editmode></editmode>-->
+</head>
+
+<body>
+
+<div id="head">
+    <div class="left-logo"><h1 title="{$site_title}"><a href="index.php"><img alt="{$site_title}" src="{$site_logo}" /></a></h1></div>
+    <div class="wrap">
+        <form class="form-search" method="GET" action="{url app=serach}">
+            <div class="input-append">
+                <input type="hidden" name="act" value="index" />
+                <input type="hidden" name="app" value="search" />
+                <input class="input-xlarge" name="keyword" placeholder="搜索一下~" id="appendedInputButtons" type="text">
+                <button type="submit" class="btn btn-inverse">{$lang.search}</button>
+            </div>
+        </form>
+        <!--<p><a href="{url app=category}">{$lang.gcategory}</a><br /><a href="{url app=category&act=store}">{$lang.scategory}</a></p>-->
+    </div>
+
+    <div class="menu">
+
+        <ul class="nav nav-pills">
+            <!--{if !$visitor.user_id}-->
+            <li class=""> <a class="btn btn-link" href="{url app=member&act=login&ret_url=$ret_url}">{$lang.login}</a> </li>
+            <li><p>/</p></li>
+            <li class=""> <a class="btn btn-link" href="{url app=member&act=register&ret_url=$ret_url}">{$lang.register}</a> </li>
+            <!--{else} -->
+            <li class=""><p>你好,{$visitor.user_name|escape}</p></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#" style="">用户中心<b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                    <!--{if $visitor.store_id}-->
+                    <li><a href="{url app=seller_order}">{$lang.order_manage}</a></li>
+                    <!--<li><a href="{url app=my_qa}">{$lang.my_qa}</a></li>-->
+                    <li><a href="{url app=my_goods}">{$lang.my_goods}</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <!--{/if}-->
+                    <li><a href="{url app=buyer_order}">{$lang.my_order}</a></li>
+                    <li><a href="{url app=my_favorite}">{$lang.favorite}</a></li>
+                    <li><a href="{url app=message&act=newpm}">{$lang.pm}<!--{if $new_message}-->({$new_message})<!--{/if}--></a></li>
+                    <li><a href="{url app=cart}">{$lang.shopping_cart} <strong id="cart_goods_kinds">{$cart_goods_kinds}</strong> {$lang.kind_of_goods}</a> </li>
+                    <li role="presentation" class="divider"></li>
+                    <li><a href="{url app=member&act=logout}"><i class="icon-signout"></i>{$lang.logout}</a></li>
+                </ul>
+            </li>
+            <!--{/if}-->
+        </ul>
+    </div>
+</div>
+
+<div id="nav">
+    <ul id="nav-ul">
+        <li class="nav-first-li-category">
+        <p class="text-left">
+        <?php if ($_GET['app'] == 'search' && $_GET['act'] == 'store') { ?>
+            分区分类
+        <?php } else { ?>
+            商品分类 
+        <?php }?>
+        <i class="icon-align-justify icon-white my-extract-icon"></i>
+        </p></li>
+        <li class="nav-first-li"> <a class="{if $index}link{else}hover{/if}" href="index.php"> <p class="text-center">{$lang.index}</p> </a> </li>
+        <!--{foreach from=$navs.middle item=nav}-->
+        <li><a class="{if !$index and $nav.link eq $current_url}link{else}hover{/if}" href="{$nav.link}"{if $nav.open_new} target="_blank"{/if}><p class="text-center">{$nav.title|escape}</p></a></li>
+        <!--{/foreach}-->
+        <li class="nav-cart"><a href="{url app=cart}"><i class="icon-white icon-shopping-cart"></i><b>({$cart_goods_kinds})</b> {$lang.shopping_cart}</a></li>
+    </ul>
+</div>
+
+

@@ -1,0 +1,176 @@
+                <h4 class="add_title">
+                    <p>
+                        <b class="ico">收货地址</b>
+                        <a href="{url app=my_address}" target="_blank"><i class="icon-cogs" style="margin-right:5px;"></i>{$lang.manage_address}</a>
+                    </p>
+                </h4>
+                <!--{if $my_address}-->
+                <!--{foreach from=$my_address item=address name=address_select}-->
+                <ul class="receive_add address_item{if $smarty.foreach.address_select.iteration == 1} selected_address{/if}">
+                    <li class="radio">
+                        <input id="address_{$address.addr_id}" type="radio"{if $smarty.foreach.address_select.iteration == 1} checked="checked"{/if} name="address_options" value="{$address.addr_id}" /></li>
+                    <li class="particular">{$address.region_name|escape}&nbsp;&nbsp;{$address.address|escape}</li>
+                    <li class="name">{$lang.consignee}: {$address.consignee|escape}</li>
+                    <li class="mobile"><!--{if $address.phone_mob}-->{$address.phone_mob}<!--{else}-->{$address.phone_tel}<!--{/if}--></li>
+                </ul>
+                <!--{/foreach}-->
+                <!--{/if}-->
+                <ul class="new_receive_add address_item {if $my_address}{else}selected_address{/if}">
+                    <li class="radio"><input type="radio" name="address_options" id="use_new_address" value="0" /></li>
+                    <li class="particular">{$lang.use_new_address}</li>
+                </ul>
+
+                <ul class="fill_in_content" id="address_form" style="display: none">
+                    <li>
+                        <p class="fill_in">
+                            收货人名 : <input type="text" name="consignee" id="consignee" class="text1"  />
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fill_in">
+                            <div id="region">
+                                {$lang.region} :
+                                <input  id="edit_region_button" type="button" class="edit_region" value="{$lang.edit}" style="display:none;" />
+                                <select class="select-region" name="select-region">
+                                    <option value="0">{$lang.select_pls}</option>
+                                    {html_options options=$regions}
+                                </select>
+                                <input type="hidden" class="mls_id" name="region_id" id="region_id"/>
+                                <input type="hidden" name="region_name" class="mls_names" id="region_name"/>
+                                <script type="text/javascript">
+                                    $('.select-region').change(function(){
+                                        $('#region_id').val($(this).val());
+                                        $('#region_name').val($("#select-region").find("option:selected").text());
+                                    });
+                                </script>
+                            </div>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fill_in">
+                            {$lang.address} : <input  type="text" name="address" id="address" class="text1 width1" />
+                        </p>
+                    </li>
+                    <li>
+                        <p class="fill_in">{$lang.zipcode} :
+                            <input type="text" name="zipcode" id="zipcode" class="text1" placeholder="" />
+                        </p>
+                    </li>
+                    <li style="display: none">
+                        <p class="fill_in">{$lang.phone_tel} : <input placeholder="" type="text" name="phone_tel" id="phone_tel" class="text1" /></p>
+                    </li>
+                    <li>
+                        <p class="fill_in">{$lang.phone_mob} : <input type="text" id="phone_mob" name="phone_mob" class="text1" /></p>
+                    </li>
+                    <li>
+                        <p class="fill_in">
+                            <label>
+                                <input style="margin-top: 0;" type="checkbox" checked="true" value="1" id="save_address" name="save_address">&nbsp;{$lang.save_address}
+                            </label>
+                        </p>
+                    </li>
+                </ul>
+
+                <h4 class="add_title"><p><b class="ico">配送方式</b></p></h4>
+                <div class="fashion_list">
+                    <!--{foreach from=$shipping_methods item=shipping_method name=shipping_select}-->
+                    <ul class="receive_add" shipping_id="{$shipping_method.shipping_id}" >
+                        <li class="radio"><input type="radio" name="shipping_id" value="{$shipping_method.shipping_id}" /></li>
+                        <li class="fashion" style="font-weight: normal">{$shipping_method.shipping_name|escape}</li>
+                        <li class="pay" style="font-weight: normal">{$lang.shipping_fee}:&nbsp;<span class="money" ectype="shipping_fee">&yen; 0.00</span></li>
+                        <li class="explain"  style="font-weight: normal">{$shipping_method.shipping_desc|escape}</li>
+                    </ul>
+                    <!--{/foreach}-->
+                </div>
+                <script type="text/javascript">
+                    var nextCheck = $("input:radio[name='shipping_id']:checked")[0];
+                    $("input:radio[name='shipping_id']").click(function(){
+                        if( this == nextCheck  ) {
+                            return ;
+                        }//End Of If
+
+                        $(this).attr('checked',true);
+                        $(this).parent().siblings().css('font-weight','bold');
+
+                        //取消之前选中
+                        if (nextCheck != null) {
+                            $(nextCheck).attr('checked',false);
+                            $(nextCheck).parent().siblings().css('font-weight','normal');
+                        }//End Of IF
+                        nextCheck = this;
+                    });//End Of Func
+
+                    var check = $("input:radio[name='address_options']:checked")[0];
+                    var addresses = {$addresses};
+                    //设置地址的方法
+                    function setAddress( address_id ) {
+                        if(address_id != 0) {
+                            addr_data = addresses[address_id];
+                        } else {
+                            $("input[name='consignee']").val("");
+                            $("input[name='address']").val("");
+                            $("input[name='zipcode']").val("");
+                            $("input[name='email']").val("");
+                            $("input[name='phone_tel']").val("");
+                            $("input[name='phone_mob']").val("");
+                            $("input[name='region_id']").val("");
+                            $("input[name='region_name']").val("");
+                            return;
+                        }//End Of If-ELse
+                        for(k in addr_data){
+                            switch(k){
+                                case 'consignee':
+                                case 'address':
+                                case 'zipcode':
+                                case 'email':
+                                case 'phone_tel':
+                                case 'phone_mob':
+                                case 'region_id':
+                                    $("input[name='" + k + "']").val(addr_data[k]);
+                                    break;
+                                case 'region_name':
+                                    $("input[name='" + k + "']").val(addr_data[k]);
+                                    /*
+                                    $('#region select').hide();
+                                    $('#region_name_span').text(addr_data[k]).show();
+                                    $("#edit_region_button").show();
+                                    */
+                                    break;
+                            }//End Of Switch
+                        }//End Of For
+                    }//End Of Func
+                    //初始化一次地址
+                    var init_address_id = $("input:radio[name='address_options']:checked").val();
+                    if( init_address_id  != 0 ) {
+                        setAddress(init_address_id);
+                    }//End OF IF
+
+                    //触发点击事件
+                    $("input:radio[name='address_options']").click(function(){
+                        //如果选中自己
+                        if( this == check ) {
+                            return ;
+                        }
+                        $(this).attr('checked',true);
+                        $(this).parent().siblings().css('font-weight','bold');
+                        //如果是已经存在的地址
+                        if( $(this).val() != 0 ) {
+                            var _this = this;
+                            setTimeout(function(){setAddress($(_this).val())},500);
+                        }//End Of If
+                        //如果是新地址
+                        if( $(this).val() == 0 ) {
+                            setAddress(0);
+                           $('.fill_in_content').slideDown();
+                        }//End Of If
+                        if (check != null) {
+                            $(check).attr('checked',false);
+                            $(check).parent().siblings().css('font-weight','normal');
+                            if( $(check).val() == 0 ) {
+                                $('.fill_in_content').slideUp();
+                            }
+                        }//End Of If
+                        check = this;
+                        //$(this).parent().parent().css('font-size','bold');
+                    });
+                </script>

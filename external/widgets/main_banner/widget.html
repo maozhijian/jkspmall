@@ -1,0 +1,59 @@
+<div class="main-banner-content">
+        <ul class="main-banner-content-list">
+            <li class="main-banner-content-li-first">
+                <dl class="main-banner-content-li-dl" data="1">
+                   <dt><p class="text-center"><a href="javascript:;"><i class="icon-thumbs-up icon-4x"></i></a></p></dt>
+                   <dd><p class="text-center">质量保证</p></dd>
+                </dl>
+            </li>
+            <li>
+                <dl class="main-banner-content-li-dl" data="2">
+                    <dt><p class="text-center"><a href="javascript:;"><i class="icon-money icon-4x"></i></a></p></dt>
+                    <dd><p class="text-center">物美价廉</p></dd>
+                </dl>
+            </li>
+            <li>
+                <dl class="main-banner-content-li-dl" data="3">
+                    <dt><p class="text-center"><a href="javascript:;"><i class="icon-globe icon-4x"></i></a></p></dt>
+                    <dd><p class="text-center">全球采购</p></dd>
+                </dl>
+            </li>
+            <li>
+                <dl class="main-banner-content-li-dl" data="4">
+                    <dt><p class="text-center"><a href="javascript:;"><i class="icon-phone icon-4x"></i></a></p></dt>
+                    <dd><p class="text-center">4001000501</p></dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="main-banner-detail">
+            <div class="alert alert-info main-banner-detail-1" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p>①完善的供应链+正规的供货渠道=您在营茂购买的所有商品均能得到最严格的保障</p>
+                <p>②所有商品均提供增值发票；对于价值高昂的产品，我们会与您签署相应合同，更进一步保障您的权益。</p>
+            </div>
+            <div class="alert alert-info main-banner-detail-2" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                低廉的价格是营茂最具优势的竞争力之一：对于同一款产品，营茂的价格绝对全网最低。
+            </div>
+            <div class="alert alert-info main-banner-detail-3" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                营茂的供货商超过一万家，在全球范围内形成一个完善、高效的供应链，通过他我们能随时相应您的需求。
+            </div>
+            <div class="alert alert-info main-banner-detail-4" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p>①如有任何问题，请拨打咨询电话，我们的销售专员会热忱为您服务。</p>
+                <p>②您在收到货品后若有任何问题均可直接与我们联系，由我们与供货商交涉，省去您不必要的麻烦。 </p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var i = 0;
+            $('.main-banner-content-li-dl').click(function(){
+                if( i != 0 ) {
+                    $('.main-banner-detail-'+i).slideUp();
+                }//End Of If
+                i = $(this).attr('data');
+                $('.main-banner-detail-'+i).slideDown();
+            });
+        </script>
+</div>
+

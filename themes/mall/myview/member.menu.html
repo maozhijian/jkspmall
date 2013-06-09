@@ -1,0 +1,58 @@
+    <div id="left">
+    <?php //颜色分割
+        $color_count = 1;
+        //清理不需要的menu
+        $shift = array('我的团购','我的优惠券','我的咨询','团购管理','咨询管理','合作伙伴管理','优惠券管理','主题设置','导航管理');
+        if( ! function_exists('mys_shift_array') ) {
+            function mys_shift_array( $origin_array, $shift_array) {
+                foreach($origin_array as $key => $row) {
+                    if( in_array( $row['text'], $shift_array) ) {
+                        unset($origin_array[$key]);
+                        continue;
+                    }//End Of IF
+                    if( isset( $row['submenu'] )) {
+                        $origin_array[$key]['submenu'] = mys_shift_array( $origin_array[$key]['submenu'], $shift_array );
+                    }//End Of If
+                }//End Of Foreach
+                return $origin_array;
+            }//End Of Func
+        }//End Of If
+        $this->_var['_member_menu'] = mys_shift_array( $this->_var['_member_menu'], $shift);
+    ?>
+        <dl>
+    <!--{foreach from=$_member_menu item=item}-->
+        <!--{if $item.submenu}-->
+            <dt><h3>{$item.text}</h3></dt>
+        <!--{foreach from=$item.submenu item=subitem k=k}-->
+            <dd>
+            <!--{if $subitem.name eq $_curitem}-->
+                <!-- 选中 -->
+                <p class="text-center"><a href="{$subitem.url}" class="active">{$subitem.text}</a></p>
+            <!--{else}-->
+                <p class="text-center">
+                    <a href="{$subitem.url}" class="normal <?php if(($color_count++)%2 == 1) echo 'left-single'; else echo 'left-double';?>" >
+                    {$subitem.text}</a>
+                </p>
+            <!--{/if}-->
+            </dd>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    <!--{/foreach}-->
+            <dd style="border-top:2px solid #f1f1f1; height: 50px;height: 50px;line-height: 50px;padding-left:10px;">
+                     <i class="icon-phone-sign" style="font-weight: normal; font-size: 20px; height: 50px;line-height: 50px;color: rgb(155,35,35)!important; "></i>
+                     <span style="color:rgb(155,35,35) ; font-weight: bold; font-size:15px;">咨询电话 : {$telephone}</span>
+            </dd>
+        </dl>
+
+
+        <!--{if $_member_menu.overview}-->
+        <!-- 屏蔽开店
+        <div class="application">
+            <p>{$lang.not_seller}: </p>
+            <a href="{$_member_menu.overview.url}" title="{$_member_menu.overview.text}"></a>
+        </div>
+        <div class="clear"></div>
+        -->
+        <!--{/if}-->
+        <div class="adorn_bottom"></div>
+    </div>

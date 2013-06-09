@@ -1,0 +1,29 @@
+<!--{if $page_info.page_count gt 1}-->
+<div class="pagination">
+    <ul>
+        <li class="disabled"><a class="stat">共 {$page_info.page_count} 页</a></li>
+        <!--{if $page_info.prev_link}-->
+        <li><a href="{$page_info.prev_link}">上一页</a></li>
+        <!--{else}-->
+        <li class="disabled"><a>上一页</a></li>
+        <!--{/if}-->
+
+        <!--{if $page_info.first_link}-->
+            <li><a class="page_link" href="{$page_info.first_link}">1</a></li>
+        <!--{/if}-->
+
+        <!--{foreach from=$page_info.page_links key=page item=link}-->
+            <!--{if $page_info.curr_page eq $page}-->
+            <li class="active"><a class="page_hover" href="{$link}">{$page}</a></li>
+            <!--{else}-->
+            <li><a class="page_link" href="{$link}">{$page}</a></li>
+            <!--{/if}-->
+        <!--{/foreach}-->
+        <!--{if $page_info.next_link}-->
+        <li><a class="down" href="{$page_info.next_link}">下一页</a></li>
+        <!--{else}-->
+        <li class="disabled"><a>下一页</a></li>
+        <!--{/if}-->
+    </ul>
+</div>
+<!--{/if}-->

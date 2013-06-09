@@ -1,0 +1,234 @@
+{include file=header.html}
+<script type="text/javascript" src="{lib file=search_goods.js}" charset="utf-8"></script>
+<script type="text/javascript">
+var upimg   = '{res file=images/up.gif}';
+var downimg = '{res file=images/down.gif}';
+imgUping = new Image();
+imgUping.src = upimg;
+</script>
+
+<div id="content">
+
+    <div id="content-left">
+        {include file=left_category.html}
+    </div>
+
+    <div id="content-main">
+        {include file=curlocal.html}
+        <div class="content-main-head">
+            <div class="content-main-head-goods-category">
+                <!-- 子分类 list -->
+                <h2>
+                    <b style="font-size: 23px;">
+                    <?php
+                    if( ! empty($_GET['keyword']) ) {
+                        $this->_var['my_tmp'] = $_GET['keyword'];
+                    } else {
+                        $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
+                    }//End Of IF-Else
+                    ?>
+                    {$my_tmp.text} </b>(共 {$page_info.item_count} 件)
+                </h2>
+                <div class="side_textlist">
+                    <ul ectype="ul_category">
+                        <!--{foreach from=$categories item=category name=fe_category}-->
+                        <!-- {if $smarty.foreach.fe_category.iteration le 10} -->
+                        <li><a href="javascript:void(0);" id="{$category.cate_id}">{$category.cate_name|escape}</a>({$category.count})</li>
+                        <!-- {else} -->
+                        <li style="display:none"><a href="javascript:void(0);" id="{$category.cate_id}">{$category.cate_name|escape}</a>({$category.count})</li>
+                        <!-- {/if} -->
+                        <!--{/foreach}-->
+                        <!-- 如果分类数多于十个 需要展开 -->
+                        <!-- {if $category_count gt 10} -->
+                        <li><input type="button btn-link btn" class="brands_btn" value="{$lang.view_all_category}" id="show_category" /></li>
+                        <!-- {/if} -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- {if !$filters.region_id} -->
+            <div class="content-main-head-goods-category">
+                <h2><b>{$lang.by_region}</b></h2>
+                <ul ectype="ul_region">
+                    <!--{foreach from=$regions item=row name=fe_region}-->
+                    <!-- {if $smarty.foreach.fe_region.iteration le 10} -->
+                    <li><a href="javascript:void(0);" id="{$row.region_id}" title="{$row.region_name|escape}">{$row.region_name|escape}</a> ({$row.count})</li>
+                    <!-- {else} -->
+                    <li style="display:none"><a href="javascript:void(0);" id="{$row.region_id}" title="{$row.region_name}">{$row.region_name|escape}</a> ({$row.count})</li>
+                    <!-- {/if} -->
+                    <!--{/foreach}-->
+
+                    <!-- {if $region_count gt 10} -->
+                    <li><input type="button" class="brands_btn btn-link btn" value="{$lang.view_all_region}" id="show_region" /></li>
+                    <!-- {/if} -->
+                </ul>
+            </div>
+            <!-- {/if} -->
+
+            <!-- {if !$filters.brand} -->
+            <div class="content-main-head-goods-category">
+                <h2><b>{$lang.by_brand}</b></h2>
+                    <ul ectype="ul_brand">
+                        <!--{foreach from=$brands item=row name=fe_brand}-->
+                        <!-- {if $smarty.foreach.fe_brand.iteration le 10} -->
+                        <li><a href="javascript:void(0);" title="{$row.brand}" id="{$row.brand|escape:url}">{$row.brand|escape}</a> ({$row.count})</li>
+                        <!-- {else} -->
+                        <li style="display:none"><a href="javascript:void(0);" title="{$row.brand}" id="{$row.brand|escape:url}">{$row.brand|escape}</a> ({$row.count})</li>
+                        <!-- {/if} -->
+                        <!--{/foreach}-->
+
+                        <!-- {if $brand_count gt 10} -->
+                        <li><input type="button" class="brands_btn btn btn-link" value="{$lang.view_all_brand}" id="show_brand" /></li>
+                        <!-- {/if} -->
+                    </ul>
+            </div>
+            <!-- {/if} -->
+
+        </div>
+         <div class="module_filter">
+            <div class="module_filter_line">
+
+                <ul class="module_filter_nav" ectype="ul_filter">
+                    <!--{foreach from=$filters item=filter}-->
+                    <li class="normal" ectype="li_filter">
+                        <span class="txt">{$filter.name}: {$filter.value}</span>
+                        <span class="ico"><img src="{res file=images/delete.gif}" title="{$filter.key}" /></span>
+                    </li>
+                    <!--{/foreach}-->
+                    <!-- {if !$filters.brand} -->
+                    <li class="normal" ectype="dropdown_filter_title" ecvalue="brand">
+                        <span class="txt">{$lang.brand}: <a href="javascript:void(0);">{$lang.select_pls}</a></span>
+                        <span class="ico"><img src="{res file=images/down.gif}" /></span>
+                    </li>
+                    <!-- {/if} -->
+                    <!-- {if !$filters.region_id} -->
+                    <li class="normal" ectype="dropdown_filter_title" ecvalue="region">
+                        <span class="txt">{$lang.region}: <a href="javascript:void(0);">{$lang.select_pls}</a></span>
+                        <span class="ico"><img src="{res file=images/down.gif}" /></span>
+                    </li>
+                    <!-- {/if} -->
+                </ul>
+
+                <!-- {if !$filters.brand} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="brand" style="display:none">
+                    <ul ectype="ul_brand">
+                        <!--{foreach from=$brands item=row}-->
+                        <li><a href="javascript:void(0);" title="{$row.brand}" id="{$row.brand|escape:url}">{$row.brand|escape} ({$row.count})</a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {/if} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="price" style="display:none">
+                    <ul ectype="ul_price">
+                        <!--{foreach from=$price_intervals item=row}-->
+                        <li><a href="javascript:void(0);" title="{$row.min} - {$row.max}">{$row.min|price} - {$row.max|price} ({$row.count})</a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {if !$filters.region_id} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="region" style="display:none">
+                    <ul ectype="ul_region">
+                        <!--{foreach from=$regions item=row}-->
+                        <li><a href="javascript:void(0);" id="{$row.region_id}" title="{$row.region_name|escape}">{$row.region_name|escape} ({$row.count})</a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {/if} -->
+            </div>
+        </div>
+        <div class="content-main-head-goods-order">
+           <ul id="my-order-by">
+               <li>排序:</li>
+               <li>
+                   <?php if ($_GET['order'] == 'sales desc') { ?>
+                   <a class="goods-order"  data="sales asc">销量<i class="icon-arrow-up"></i></a>
+                   <?php } elseif ($_GET['order'] == 'sales asc' ) { ?>
+                   <a class="goods-order"  data="sales desc">销量<i class="icon-arrow-down"></i></a>
+                   <?php } else { ?>
+                   <a class="goods-order"  data="sales desc">销量</a>
+                   <?php } ?>
+               </li>
+               <li>
+                   <?php if ($_GET['order'] == 'views desc') { ?>
+                   <a class="goods-order"  data="views asc">浏览<i class="icon-arrow-up"></i></a>
+                   <?php } elseif ($_GET['order'] == 'views asc') { ?>
+                   <a class="goods-order"  data="views desc">浏览<i class="icon-arrow-down"></i></a>
+                   <?php } else { ?>
+                   <a class="goods-order"  data="views desc">浏览</a>
+                   <?php } ?>
+               </li>
+               <li>
+                   <?php if ($_GET['order'] == 'price asc') { ?>
+                   <a class="goods-order" data="price asc" >价格<i class="icon-arrow-up"></i></a>
+                   <?php } elseif ($_GET['order'] == 'price desc') { ?>
+                   <a class="goods-order" data="price desc" >价格<i class="icon-arrow-down"></i></a>
+                   <?php } else { ?>
+                   <a class="goods-order" data="price desc">价格</a>
+                   <?php } ?>
+               </li>
+
+               <?php
+                if( isset($_GET['price'])) {
+                    $array = explode('-',$_GET['price']);
+                    if( count($array) != 2) {
+                        unset($array);
+                    }//End Of If
+                    $array[0] = (int) $array[0];
+                    $array[1] = (int) $array[1];
+                }//End Of If
+                ?>
+               <li style="margin-left: 10px;">
+                   <form class="form-search">
+                        按价格检索：
+                       <input type="text" id="order-by-price-min" value="<?php echo $array[0];?>"/>
+                       -
+                       <input type="text" id="order-by-price-max" value="<?php echo $array[1];?>"/>
+                       <button  id="order-by-price" class="btn btn-mini">搜索</button>
+                   </form>
+               </li>
+               <!--
+               <li class="content-main-head-goods-order-last-li">
+                   {include file=page.bottom.html}
+               </li>
+               -->
+           </ul>
+        </div>
+
+
+        <div class="content-main-goods-list">
+
+            <div class="shop_con_list">
+
+                <div class="{$display_mode}" ectype="current_display_mode">
+                    <!-- {if $goods_list} -->
+                    <ul class="list_pic">
+                        <!--{foreach from=$goods_list item=goods}-->
+                        <li>
+                            <dl>
+                                <dt><p class="text-center"><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.default_image}" /></a></p></dt>
+                                <dd><p class="text-center list-goods-price"><span style="color:#999">参考价格: </span>{$goods.price|price}</p></dd>
+                                <dd><p class="text-center list-goods-name"><a href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name|escape}</a></p> </dd>
+                                <!--<dd><p class="text-center list-store-name">{$goods.store_name|escape} - {$goods.grade_name|escape}</p></dd>-->
+                                <dd><p class="text-center list-store-name"><span style="color:#999">货号: </span>{$goods.sku}</p></dd>
+                                <!--<dd><p class="text-center list-goods-sales"></p><b>{$lang.sales}: {$goods.sales|default:0} {$lang.unit} | <a href="{url app=goods&act=comments&id=$goods.goods_id}" target="_blank">{$goods.comments|default:0} {$lang.comment}</a></b>  </dd>-->
+                            </dl>
+                            </span>
+
+                            </h3>
+                        </li>
+                        <!--{/foreach}-->
+                    </ul>
+                    <!-- {else} -->
+                    <div id="no_results">{$lang.no_records}</div>
+                    <!-- {/if} -->
+                </div>
+            </div>
+
+            <div class="shop_list_page">
+                {include file=page.my.bottom.html}
+            </div>
+        </div>
+        {include file=footer.html}
+    </div>
+</div>
+

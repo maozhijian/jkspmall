@@ -1,0 +1,52 @@
+{include file=header.html}
+
+
+<div id="content">
+    <div id="left">
+        {include file=left.html}
+    </div>
+
+    <div id="right">
+        {include file=curlocal.html}
+        {include file=top.html}
+        <div class="content-main-goods-list">
+            <div class="shop_con_list">
+                <h2 class="common_title veins2"> {$lang.recommended_goods} </h2>
+                <!--{if $recommended_goods}-->
+                <ul class="list_pic">
+                    <!--{foreach from=$recommended_goods item=rgoods}-->
+                    <li>
+                        <dl>
+                            <dt> <p class="text-center"> <a href=" class="pic"><a href="{url app=goods&id=$rgoods.goods_id}" target="_blank"><img src="{$rgoods.default_image}" /></a> </p> </dt>
+                            <dd><p class="text-center list-goods-price"><span style="color:#999">参考价格: </span>{$rgoods.price|price}</p></dd>
+                            <dd><p class="text-center list-goods-name"><a href="{url app=goods&id=$rgoods.goods_id}" target="_blank">{$rgoods.goods_name|escape}</a></p> </dd>
+                        </dl>
+                    </li>
+                    <!-- {/foreach} -->
+                </ul>
+                <!--{else}-->
+                <div class="nothing"><p>{$lang.no_records}</p></div>
+                <!--{/if}-->
+
+                <!--最新商品-->
+                <h2 class="common_title veins2">{$lang.new_goods} </h2>
+                <!--{if $new_goods}-->
+                <ul class="list">
+                    <!--{foreach from=$new_goods item=ngoods}-->
+                    <li>
+                        <dl>
+                            <dt> <p class="text-center"> <a href=" class="pic"><a href="{url app=goods&id=$ngoods.goods_id}" target="_blank"><img src="{$ngoods.default_image}" /></a> </p> </dt>
+                            <dd><p class="text-center list-goods-price"><span style="color:#999">参考价格: </span>{$ngoods.price|price}</p></dd>
+                            <dd><p class="text-center list-goods-name"><a href="{url app=goods&id=$ngoods.goods_id}" target="_blank">{$ngoods.goods_name|escape}</a></p> </dd>
+                        </dl>
+                    </li>
+                    <!--{/foreach}-->
+                </ul>
+                <!--{else}-->
+                <div class="nothing"><p>{$lang.no_records}</p></div>
+                <!--{/if}-->
+            </div>
+        </div>
+        {include file=footer.html}
+</div>
+

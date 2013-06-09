@@ -1,0 +1,101 @@
+
+        <div class="module_common">
+            <h2 class="common_title">专区简介</h2>
+            <div class="wrap">
+                <p><img style="width: 100%; height: 70px; margin-top: 10px; margin-bottom: 10px;" src="{$store.store_logo}"/></p>
+                <div class="desc">{$store.description|escape:editor} </div>
+            </div>
+        </div>
+
+        <div class="module_common">
+            <h2 class="common_title">专区内搜索<span>总计:{$store.goods_count}件</span></h2>
+            <div class="web_search">
+                <form id="" name="" method="get" action="index.php">
+                    <input type="hidden" name="app" value="store" />
+                    <input type="hidden" name="act" value="search" />
+                    <input type="hidden" name="id" value="{$store.store_id}" />
+                    <input class="text" placeholder="搜索一下.." type="text" name="keyword" />
+                    <input class="btn" type="submit" value="搜索" />
+                </form>
+            </div>
+        </div>
+        
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                专区分类
+                <span class="all-goods" style="float: right; margin-right: 5px;"><a style="color: #999;" class="none_ico" href="{url app=store&id=$store.store_id&act=search}">专区{$lang.all_goods}</a></span>
+            </h2>
+            <?php $singlecount= 1; $menuCount = 0;?>
+            <ul class="submenu">
+                <!--{foreach from=$store.store_gcates item=gcategory}-->
+                    <!--{if $gcategory.children}-->
+                    <li class="outside-li">
+                    <a class="category <?php if( ($singleCount++)%2 == 1) echo 'single'; else echo ' double'; ?>" href="{url app=store&id=$store.store_id&act=search&cate_id=$gcategory.id}">
+                        {$gcategory.value|escape}
+                        <i style="margin-left:5px;" class="icon-circle-arrow-down"></i>
+                    </a>
+                        <ul style="display: none;" data=0  >
+                            <!--{foreach from=$gcategory.children item=child_gcategory}-->
+                            <li>
+                                <a class="mini-category" href="{url app=store&id=$store.store_id&act=search&cate_id=$child_gcategory.id}">
+                                    <i class="icon-caret-right" style="padding-left: 10px;"></i>
+                                    {$child_gcategory.value|escape}
+                                </a>
+                            </li>
+                            <!--{/foreach}-->
+                        </ul>
+                    </li>
+                    <!--{else}-->
+                    <li><a class="none_ico" href="{url app=store&id=$store.store_id&act=search&cate_id=$gcategory.id}">{$gcategory.value|escape}</a></li>
+                    <!--{/if}-->
+                <!--{/foreach}-->
+            </ul>
+            <script type="text/javascript">
+                $('.category').click(function(){
+                    var sub_ul = $(this).parent().find('ul');
+                    if( sub_ul.attr('data') != 0 ) {
+                        $(this).find('i').attr('class','icon-circle-arrow-down');
+                        sub_ul.attr('data',0);
+                        sub_ul.slideUp();
+                    }//End Of If
+                    else {//展开
+                        $(this).find('i').attr('class','icon-circle-arrow-up');
+                        sub_ul.attr('data',1);
+                        sub_ul.slideDown();
+                    }//End Of IF
+                    return false;
+                });
+            </script>
+        </div>
+
+        <!--{if $smarty.get.app eq "goods"}-->
+        <div class="module_common">
+            <h2 class="common_title veins1">
+                {$lang.goods_history}
+            </h2>
+            <div class="wrap">
+                <div class="wrap_child">
+                    <ul class="annals">
+                        <!--{foreach from=$goods_history item=gh_goods}-->
+                        <li>
+                            <a href="{url app=goods&id=$gh_goods.goods_id}">
+                                <img src="{$gh_goods.default_image}" width="50" height="50" alt="{$gh_goods.goods_name|truncate:20|escape}" title="{$gh_goods.goods_name|escape}" />
+                                <span >{$gh_goods.goods_name|truncate:30|escape}</span>
+                            </a>
+                        </li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--{/if}-->
+
+
+        <div class="module_common">
+            <div class="wrap">
+                <div style="height: 50px;line-height: 50px;border-top: 1px solid #f1f1f1; margin-top:30px; padding-left:10px;">
+                    <i class="icon-phone-sign" style="font-weight: normal; font-size: 20px; height: 50px;line-height: 50px;color: rgb(155,35,35)!important; "></i>
+                    <span style="color:rgb(155,35,35) ; font-weight: bold; font-size:15px;">咨询电话 : {$telephone}</span>
+                </div>
+            </div>
+        </div>

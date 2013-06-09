@@ -1,0 +1,14 @@
+<div class="last-sale">
+    <h2><b class="bargain_on" title="最新成交">最新成交 Deal</b></h2>
+    <ul class="list_pic">
+        <!-- {foreach from=$widget_data item=goods} -->
+        <li>
+            <dl>
+                <dt><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.goods_image}" /></a></dt>
+                <dd><a href="{url app=goods&id=$goods.goods_id}" target="_blank" title="{$goods.goods_name|escape}">{$goods.goods_name|escape}</a> </dd>
+                <dd><span class="price">{$goods.price|price}</span></dd>
+            </dl>
+        </li>
+        <!-- {/foreach} -->
+    </ul>
+</div>

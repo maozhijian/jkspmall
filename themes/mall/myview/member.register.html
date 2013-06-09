@@ -1,0 +1,145 @@
+{include file="header.html"}
+<script type="text/javascript">
+//注册表单验证
+$(function(){
+    $('#register_form').validate({
+        errorPlacement: function(error, element){
+            var error_td = element.parent('td').next('td');
+            error_td.find('.field_notice').hide();
+            error_td.append(error);
+        },
+        success       : function(label){
+            label.addClass('validate_right').text('OK!');
+        },
+        onkeyup: false,
+        rules : {
+            user_name : {
+                required : true,
+                byteRange: [3,15,'{$charset}'],
+                remote   : {
+                    url :'index.php?app=member&act=check_user&ajax=1',
+                    type:'get',
+                    data:{
+                        user_name : function(){
+                            return $('#user_name').val();
+                        }
+                    },
+                    beforeSend:function(){
+                        var _checking = $('#checking_user');
+                        _checking.prev('.field_notice').hide();
+                        _checking.next('label').hide();
+                        $(_checking).show();
+                    },
+                    complete :function(){
+                        $('#checking_user').hide();
+                    }
+                }
+            },
+            password : {
+                required : true,
+                minlength: 6
+            },
+            password_confirm : {
+                required : true,
+                equalTo  : '#password'
+            },
+            email : {
+                required : true,
+                email    : true
+            },
+            captcha : {
+                required : true,
+                remote   : {
+                    url : 'index.php?app=captcha&act=check_captcha',
+                    type: 'get',
+                    data:{
+                        captcha : function(){
+                            return $('#captcha1').val();
+                        }
+                    }
+                }
+            },
+            agree : {
+                required : true
+            }
+        },
+        messages : {
+            user_name : {
+                required : '{$lang.user_name_required}',
+                byteRange: '{$lang.user_name_limit}',
+                remote   : '{$lang.user_already_taken}'
+            },
+            password  : {
+                required : '{$lang.password_required}',
+                minlength: '{$lang.password_length_limit}'
+            },
+            password_confirm : {
+                required : '{$lang.password_confirm_please}',
+                equalTo  : '{$lang.password_inconsistent}'
+            },
+            email : {
+                required : '{$lang.email_required}',
+                email    : '{$lang.email_invalid}'
+            },
+            captcha : {
+                required : '{$lang.captcha_required}',
+                remote   : '{$lang.captcha_error}'
+            },
+            agree : {
+                required : '{$lang.agree_required}'
+            }
+        }
+    });
+});
+</script>
+<div id="content">
+    <div id="content-left" ></div>
+    <div id="content-main">
+        {include file="curlocal.html"}
+        <div class="content-main-login">
+                    <div class="login_fill_in">
+                        <form name="" id="register_form" class="form-horizontal" method="post" class="form-signin" action="">
+
+                            <div class="control-group">
+                                <label class="control-label" for="name"><b>注册账号 ： </b></label>
+                                <input type="text" class="" name="user_name" placeholder="手机号码">
+                            </div>
+                            <div class="control-group">
+                            <label class="control-label" for="password"><b>密码 ：</b></label>
+                                <input type="password" class="" name="password" placeholder="至少6位">
+                                <!--<label id="checking_user" class="checking">{$lang.checking}</label>-->
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="password_confirm"><b>密码确认 ： </b></label>
+                                <input type="password" class="" name="password_confirm" placeholder="再次输入密码">
+                            </div>
+                            <div class="control-group" style="display: none;">
+                                <label class="control-label" for="password_confirm"><b>邮箱 ： </b></label>
+                                <input type="text" class="" name="email" value="default@default.com" placeholder="请输入有效的邮箱地址">
+                            </div>
+                            <!--{if $captcha} -->
+                            <div class="control-group">
+                                <label class="control-label" for="email"><b>验证码 ： </b></label>
+                                <input type="text" class="" style="width: 70px" name="captcha" placeholder="验证码">
+                                <a href="javascript:change_captcha($('#captcha'));" class="renewedly"><img id="captcha" src="index.php?app=captcha&amp;{$random_number}" /></a>
+                            </div>
+                            <!--{/if} -->
+                            <div class="control-group">
+                                <label class="control-label" for="email"></label>
+                                <input id="clause" checked="true" type="checkbox" name="agree" value="1" />
+                                 {$lang.i_have_read}
+                                <a href="{url app=article&act=system&code=eula}" target="_blank" class="agreement">{$lang.mall_eula}</a>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="email"></label>
+                                <input type="submit" name="Submit" value="注册" class="login_btn btn btn-info" title="{$lang.register_now}" />
+                                已有账号? <a href="{url app=member&act=login&&ret_url=$ret_url}" class="clew">登录</a>
+                                <input type="hidden" name="ret_url" value="{$ret_url}" />
+                            </div>
+                        </form>
+                    </div>
+        </div>
+    </div>
+</div>
+
+{include file="footer.html"}

@@ -1,0 +1,21 @@
+<style type="text/css">
+.eject_con .add_float { width:auto; }
+</style>
+<ul class="tab">
+    <h1 style="font-size: 16px; line-height: 35px; height: 35px; border-bottom: 1px solid #ccc;">{$lang.add_friend}</h1>
+</ul>
+<div class="eject_con">
+    <div class="add_float">
+        <div id="warning"></div>
+        <form method="POST" target="iframe_post" action="index.php?app=friend&act=add" id="friend_form">
+        <ul>
+            <li>
+                <p>{$lang.receiver} : <input type="text" class="text width_normal" name="user_name" placeholder="{$lang.add_message}"/></p>
+            </li>
+            <li>
+            <input type="submit" class="btn" value="{$lang.add_friend}" />
+            </li>
+        </ul>
+        </form>
+    </div>
+</div>

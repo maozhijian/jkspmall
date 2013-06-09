@@ -1,0 +1,189 @@
+<script type="text/javascript" src="{lib file=goodsinfo.js}" charset="utf-8"></script>
+<script type="text/javascript">
+//<!CDATA[
+/* buy */
+function buy()
+{
+    if (goodsspec.getSpec() == null)
+    {
+        alert(lang.select_specs);
+        return;
+    }
+    var spec_id = goodsspec.getSpec().id;
+
+    var quantity = $("#quantity").val();
+    if (quantity == '')
+    {
+        alert(lang.input_quantity);
+        return;
+    }
+    if (parseInt(quantity) < 1)
+    {
+        alert(lang.invalid_quantity);
+        return;
+    }
+    add_to_cart(spec_id, quantity);
+}
+
+/* add cart */
+function add_to_cart(spec_id, quantity)
+{
+    var url = SITE_URL + '/index.php?app=cart&act=add';
+    $.getJSON(url, {'spec_id':spec_id, 'quantity':quantity}, function(data){
+        if (data.done)
+        {
+            $('.bold_num').text(data.retval.cart.kinds);
+            $('.bold_mly').html(price_format(data.retval.cart.amount));
+            $('.ware_cen').slideDown('slow');
+            setTimeout(slideUp_fn, 5000);
+        }
+        else
+        {
+            alert(data.msg);
+        }
+    });
+}
+
+var specs = new Array();
+<!--{foreach from=$goods._specs item=spec}-->
+specs.push(new spec({$spec.spec_id}, '{$spec.spec_1|escape}', '{$spec.spec_2|escape}', {$spec.price}, {$spec.stock}));
+<!--{/foreach}-->
+var specQty = {$goods.spec_qty};
+var defSpec = {$goods.default_spec|escape};
+var goodsspec = new goodsspec(specs, specQty, defSpec);
+//]]>
+</script>
+
+
+<div class="ware_info">
+    <div class="ware_pic">
+        <div class="big_pic">
+            <a href="javascript:;"><span class="jqzoom"><img class="goods-big-img" src="{$goods._images.0.thumbnail|default:$default_image}"  jqimg="{$goods._images.0.image_url}" /></span></a>
+        </div>
+
+        <div class="bottom_btn">
+            <!--<a class="collect" href="javascript:collect_goods({$goods.goods_id});" title="{$lang.add_to_favorite}"></a>-->
+            <div class="left_btn"></div>
+            <div class="right_btn"></div>
+            <div class="ware_box">
+                <ul>
+                    <!--{foreach from=$goods._images item=goods_image name=fe_goods_image}-->
+                    <li {if $smarty.foreach.fe_goods_image.first}class="ware_pic_hover"{/if} bigimg="{$goods_image.image_url}"><img src="{$goods_image.thumbnail}" width="55" height="55" /></li>
+                    <!--{/foreach}-->
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                var btn_list_li = $("#btn_list > li");
+                btn_list_li.hover(function(){
+                    $(this).find("ul:not(:animated)").slideDown("fast");
+                },function(){
+                    $(this).find("ul").slideUp("fast");
+                });
+            });
+        </script>
+        <!-- 注释了分享 -->
+    </div>
+
+    <div class="ware_text">
+        <div class="rate">
+            <ul>
+                <h3 class="ware_title">{$goods.goods_name|escape}</h3>
+               <li>
+                   <label class="control-label" >参考价格:</label>
+                   <label class="controls">
+                       <span class="goods-price" ectype="goods_price"> {$goods._specs.0.price|price}</span>
+                   </label>
+               </li>
+                <li>
+                    <label class="control-label" >货号:</label>
+                    <label class="controls">
+                        {$goods.sku|escape}
+                    </label>
+                </li>
+                <li>
+                    <label class="control-label" >{$lang.brand}:</label>
+                    <label class="controls">
+                        {$goods.brand|escape}
+                    </label>
+                </li>
+                <li>
+                    <label class="control-label" >{$lang.tags}:</label>
+                    <label class="controls">
+                        <!--{foreach from=$goods.tags item=tag}-->{$tag}&nbsp;&nbsp;&nbsp;<!--{/foreach}--><br />
+                    </label>
+                </li>
+                <li>
+                    <label class="control-label" >{$lang.sale_situation}:</label>
+                    <label class="controls">
+                        {$sales_info}<a href="{url app=goods&act=comments&id=$goods.goods_id}#module">{$comments}</a>
+                    </label>
+                </li>
+                <li>
+                    <label class="control-label" >{$lang.region}:</label>
+                    <label class="controls">
+                        {$store.region_name|escape}
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="handle">
+            <!--{if $goods.spec_qty gt 0}-->
+            <ul>
+                <li class="handle_title">
+                    <label class="control-label" >{$goods.spec_name_1|escape}:</label>
+                </li>
+            </ul>
+            <!--{/if}-->
+            <!--{if $goods.spec_qty gt 1}-->
+            <ul>
+                <li class="handle_title">
+                    <label class="control-label" >{$goods.spec_name_2|escape}:</label>
+                </li>
+            </ul>
+            <!--{/if}-->
+            <ul class="goods-quantity">
+                <li class="handle_title">
+                    <label class="control-label" >{$lang.quantity}:</label>
+                    <label class="controls" style="width: 290px;">
+                        <input type="text" class="text width1" name="" id="quantity" value="1" />
+                        {$lang.unit}{$lang.left_bracket}{$lang.stock}<span class="stock" ectype="goods_stock">{$goods._specs.0.stock}</span>{$lang.unit}{$lang.right_bracket}
+                    </label>
+                </li>
+                <li>
+                    <p style=" font-size: 12px;color: #999; padding-left:12px;">注：在购物车中也可修改商品数量&nbsp;&nbsp;&nbsp;同一商品请勿重复加入购物车</p>
+                </li>
+            </ul>
+            <!--{if $goods.spec_qty gt 0}-->
+            <ul>
+                <li class="handle_title">{$lang.your_select}: </li>
+                <li class="aggregate" ectype="current_spec"></li>
+            </ul>
+            <!--{/if}-->
+        </div>
+
+        <ul class="ware_btn">
+            <!--<li class="btn_c1" title="{$lang.buy_now}"><a href="#"></a></li>-->
+            <li class="btn_c2" title="{$lang.add_to_cart}"><a href="javascript:buy();"></a></li>
+            <li class="btn_c3" title="{$lang.add_to_favorite}"><a href="javascript:collect_goods({$goods.goods_id});"></a></li>
+        </ul>
+        <div class="ware_cen" >
+                <div class="ware_center">
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h5>{$lang.add_to_cart_ok}</h5>
+                        <p class="ware_text_p" >{$lang.cart_status}</p>
+                        <p class="ware_text_btn">
+                            <input type="submit" class="btn1 btn" name="" value="{$lang.view_cart}" onclick="location.href='{$site_url}/index.php?app=cart'" />
+                            <input type="submit" class="btn2 btn" name="" value="{$lang.continue_buy}" onclick="$('.ware_cen').css({'display':'none'});" />
+                        </p>
+                    </div>
+                </div>
+                <div class="ware_cen_bottom"></div>
+            </div>
+    </div>
+
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,83 @@
+{include file="header.html"}
+
+
+<div class="content">
+    <form action="index.php?app=cashier&act=goto_pay&order_id={$order.order_id}" method="POST" id="goto_pay">
+    <div id="content-left"></div>
+    <div id="content-main">
+        {include file="curlocal.html"}
+        <div class="flow_chart">
+            <div class="pos_x1 bg_a2" title="{$lang.shopping_step_one}"></div>
+            <div class="pos_x2 bg_b2" title="{$lang.shopping_step_two}"></div>
+            <div class="pos_x3 bg_c1" title="{$lang.shopping_step_three}"></div>
+        </div>
+        <div class="step_main">
+            <div class="clue_on">
+                <h4>
+                    <p class="text-left">
+                        {$lang.order_created}
+                    </p>
+                </h4>
+                <p class="text-left clue_on_desc">{$lang.order_created_desc}
+                <span><a href="{url app=buyer_order}" target="_blank">查看订单</a></span>
+                </p>
+            </div>
+            <div class="order_information">
+                <h3>
+                    <p class="text-left">
+                        <span>{$lang.order_sn}&nbsp;:&nbsp;<b>{$order.order_sn}</b></span>
+                        <span>{$lang.order_amount}&nbsp;:&nbsp;<b class="order_information_price">{$order.order_amount|price}</b></span>
+                    </p>
+                </h3>
+            </div>
+
+            <div class="buy">
+                <h3><b class="ico">最后一步</b></h3>
+                <h3><b class="ico">选择支付方式</b></h3>
+                <!--{if $payments.online}-->
+                <dl class="defray">
+                    <dt>{$lang.online_payment}</dt>
+                    <!--{foreach from=$payments.online item=payment}-->
+                    <dd>
+                        <ul>
+                            <li class="radio"><input id="payment_{$payment.payment_code}" type="radio" name="payment_id" value="{$payment.payment_id}" /></li>
+                            <li class="logo"><label for="payment_{$payment.payment_code}"><img src="{$site_url}/includes/payments/{$payment.payment_code}/logo.gif" alt="{$payment.payment_name|escape}-{$payment.payment_desc|escape}" title="{$payment.payment_name|escape}-{$payment.payment_desc|escape}" width="125" height="47" /></label> </li>
+                            <li class="explain">{$payment.payment_desc|escape} </li>
+                        </ul>
+                    </dd>
+                    <!--{/foreach}-->
+                </dl>
+                <!--{/if}-->
+                <!--{if $payments.offline}-->
+                <dl class="defray">
+                    <dt>{$lang.offline_payment}</dt>
+                    <!--{foreach from=$payments.offline item=payment}-->
+                    <dd>
+                        <ul>
+                            <li class="radio"><input type="radio" id="payment_{$payment.payment_code}" name="payment_id" value="{$payment.payment_id}" /></li>
+                            <li class="logo"><label for="payment_{$payment.payment_code}"><img alt="{$payment.payment_name|escape}-{$payment.payment_desc|escape}" title="{$payment.payment_name|escape}-{$payment.payment_desc|escape}" src="{$site_url}/includes/payments/{$payment.payment_code}/logo.gif" width="125" height="47" /></label></li>
+                            <li class="explain">{$payment.payment_desc|escape}</li>
+                        </ul>
+                    </dd>
+                    <!--{/foreach}-->
+                </dl>
+                <!--{/if}-->
+
+            </div>
+            <div class="make_sure">
+                <p class="text-right">
+                    <a href="javascript:$('#goto_pay').submit();" class="btn">确认</a>
+                </p>
+            </div>
+            <!--<div class="remark">
+                商品将于5工作日内送达。<a href="#">配送范围请查看</a>。<br />
+                您可以在 <a href="#">我的订单</a>  中查看或取消您的订单，由于系统需进行订单预处理，您可能不会立刻查询到刚提交的订单。<br />
+                如果您现在不方便支付，可以随后到 <a href="#">我的订单</a>  完成支付，我们会在48小时内为您保留未支付的订单。
+            </div>-->
+            <div class="clear"></div>
+        </div>
+    </div>
+    </form>
+</div>
+
+{include file="footer.html"}

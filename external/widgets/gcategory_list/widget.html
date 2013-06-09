@@ -1,0 +1,50 @@
+<div class="module_common">
+    <div class="category">
+
+        <div class="myassort_wrap">
+            <ul>
+            <?php
+                $my_data = $this->_var['widget_data'];
+                $outCount = 1;
+                $icon_array = array( 2=> 'icon-wrench',3 => 'icon-briefcase',4 => 'icon-medkit', 5 => 'icon-tasks', 6 =>'icon-filter',7 => 'icon-magnet');
+            ?>
+            <!-- {foreach from=$widget_data item=category name=fe_gcate} -->
+                <li data='{$category.id}' <?php if(($outCount++)%2 == 1) echo 'class="category-li category-single"'; else echo 'class="category-li category-double"';?>>
+                    <h3><i class="<?php echo $icon_array[$outCount];?>"></i><a <!--href="{url app=search&cate_id=$category.id}"-->>{$category.value|escape}</a></h3>
+                    <p>
+                        <?php $count = 0; ?>
+                        <!-- {foreach from=$category.children item=child} -->
+                            <?php if($count++ > 10 ){
+                                break;
+                             }  ?>
+                            <a href="{url app=search&cate_id=$child.id}">{$child.value|escape}</a>
+                        <!-- {/foreach} -->
+                    </p>
+                 </li>
+            <!--{/foreach} -->
+                <li style="border-top:2px solid #f1f1f1; height: 50px;">
+                    <h3 style="height: 50px;line-height: 50px;">
+                        <i class="icon-phone-sign" style="font-weight: normal; font-size: 20px; height: 50px;line-height: 50px;color: #a3abc5!important; "></i>
+                        <span style="color: #a3abc5; font-weight: normal;">咨询电话 : 010-33686624</span>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+         <div class="myassort_child_wrap myassort_child_wrap_submenu" style="display: none">
+                 <ul>
+                     <!-- {foreach from=$widget_data item=category name=fe_gcate} -->
+                     <li class="myassort_child_wrap_submenu_one_{$category.id}" style="display: none">
+                         <h3><i class=" icon-chevron-down"></i><a <!--href="{url app=search&cate_id=$category.id}"-->>{$category.value|escape}</a></h3>
+                         <p>
+                             <!-- {foreach from=$category.children item=child} -->
+                             <a href="{url app=search&cate_id=$child.id">{$child.value|escape}</a>
+                             <!-- {/foreach} -->
+                         </p>
+                     </li>
+                     <!-- {/foreach} -->
+                 </ul>
+        </div>
+
+
+    </div>
+</div>
