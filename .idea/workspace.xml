@@ -5,6 +5,7 @@
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370768151952" ignored="false" />
+    <file path="/search.goods.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370769649312" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +25,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mystyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/styles/default/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="378" column="123" selection-start="22778" selection-end="22778" vertical-scroll-proportion="0.5503597">
+            <state line="378" column="123" selection-start="22778" selection-end="22778" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.goods.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/search.goods.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="209" column="71" selection-start="10769" selection-end="10769" vertical-scroll-proportion="0.43392858">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,13 +63,14 @@
       <list>
         <option value="$PROJECT_DIR$/webroot/index.php" />
         <option value="$PROJECT_DIR$/webroot/themes/mall/myview/styles/default/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/webroot/themes/mall/myview/search.goods.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="54" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
-    <option name="height" value="714" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -273,7 +289,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="54" width="1366" height="714" extended-state="7" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -365,7 +381,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/styles/default/css/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="378" column="123" selection-start="22778" selection-end="22778" vertical-scroll-proportion="0.5503597">
+        <state line="378" column="123" selection-start="22778" selection-end="22778" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/search.goods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="209" column="71" selection-start="10769" selection-end="10769" vertical-scroll-proportion="0.43392858">
           <folding />
         </state>
       </provider>

@@ -207,7 +207,7 @@ imgUping.src = upimg;
                             <dl>
                                 <dt><p class="text-center"><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.default_image}" /></a></p></dt>
                                 <dd><p class="text-center list-goods-price"><span style="color:#999">参考价格: </span>{$goods.price|price}</p></dd>
-                                <dd><p class="text-center list-goods-name"><a href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name|escape}</a></p> </dd>
+                                <dd style="height:20px;overflow: hidden;"><p class="text-center list-goods-name"><a href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name|escape}</a></p> </dd>
                                 <!--<dd><p class="text-center list-store-name">{$goods.store_name|escape} - {$goods.grade_name|escape}</p></dd>-->
                                 <dd><p class="text-center list-store-name"><span style="color:#999">货号: </span>{$goods.sku}</p></dd>
                                 <!--<dd><p class="text-center list-goods-sales"></p><b>{$lang.sales}: {$goods.sales|default:0} {$lang.unit} | <a href="{url app=goods&act=comments&id=$goods.goods_id}" target="_blank">{$goods.comments|default:0} {$lang.comment}</a></b>  </dd>-->
