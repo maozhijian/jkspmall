@@ -123,8 +123,8 @@ div.my-first-floor { }
 .list-goods-price { color:#C00; font-weight: bold; }
 .list-store-name { color:#888; }
 a.goods-order {}
-#no_results { font-size:15px;}
-#no_results span { color:#c00; font-size:15px; font-weight:bold;}
+#no_results { font-size:15px; font-weight:bold;}
+#no_results span { color:#c00; font-size:15px;}
 /* -- end of goods list ---*/
 
 /* -- page-list ---*/

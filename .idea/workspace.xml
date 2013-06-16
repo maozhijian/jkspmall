@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" afterPath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/search.goods.html" afterPath="$PROJECT_DIR$/themes/mall/myview/search.goods.html" />
     </list>
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,7 @@
       <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="27" selection-start="6095" selection-end="6095" vertical-scroll-proportion="0.7227891">
+            <state line="125" column="46" selection-start="6083" selection-end="6083" vertical-scroll-proportion="0.6938776">
               <folding />
             </state>
           </provider>
@@ -538,7 +537,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="27" selection-start="6095" selection-end="6095" vertical-scroll-proportion="0.7227891">
+        <state line="125" column="46" selection-start="6083" selection-end="6083" vertical-scroll-proportion="0.6938776">
           <folding />
         </state>
       </provider>
