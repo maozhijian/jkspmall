@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/footer.html" afterPath="$PROJECT_DIR$/themes/mall/myview/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/store/default/footer.html" afterPath="$PROJECT_DIR$/themes/store/default/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" afterPath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
     </list>
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mystyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="134" selection-start="12261" selection-end="12261" vertical-scroll-proportion="0.52040815">
+            <state line="235" column="134" selection-start="12261" selection-end="12261" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,16 +42,16 @@
       <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/store/default/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="66" selection-start="2607" selection-end="2607" vertical-scroll-proportion="-15.730769">
+            <state line="48" column="66" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-15.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="footer.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/mall/myview/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2686" selection-end="2686" vertical-scroll-proportion="-16.384615">
+            <state line="49" column="0" selection-start="2541" selection-end="2541" vertical-scroll-proportion="0.727758">
               <folding />
             </state>
           </provider>
@@ -84,8 +82,8 @@
         <option value="$PROJECT_DIR$/external/widgets/floors/main.widget.php" />
         <option value="$PROJECT_DIR$/external/widgets/static/widget.html" />
         <option value="$PROJECT_DIR$/themes/store/default/footer.html" />
-        <option value="$PROJECT_DIR$/themes/mall/myview/footer.html" />
         <option value="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/themes/mall/myview/footer.html" />
       </list>
     </option>
   </component>
@@ -504,23 +502,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="134" selection-start="12261" selection-end="12261" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/store/default/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="66" selection-start="2607" selection-end="2607" vertical-scroll-proportion="-15.730769">
+        <state line="48" column="66" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-15.076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2686" selection-end="2686" vertical-scroll-proportion="-16.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="134" selection-start="12261" selection-end="12261" vertical-scroll-proportion="0.52040815">
+        <state line="49" column="0" selection-start="2541" selection-end="2541" vertical-scroll-proportion="0.727758">
           <folding />
         </state>
       </provider>
