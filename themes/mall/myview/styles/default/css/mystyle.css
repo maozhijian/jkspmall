@@ -233,7 +233,7 @@ div.payment_desc h3 p { margin-top: 5px; }
  /* end of cart -- */
 
 .other { width: 100%;  border: 1px solid #e6e6e6;  }
-.other h2 { line-height: 20px; font-size: 12px; padding-left:9px; font-weight: normal!important; padding-top: 1px;color:#666; padding-bottom: 1px;}
+.other h2 { line-height: 20px; font-size: 12px; padding-left:9px; font-weight: normal!important; padding-top: 7px;color:rgb(170,170,170); padding-bottom: 7px;}
 
 .notice-part ul { margin-left:10px; overflow: hidden;}
 .notice-part ul li { line-height: 24px; height: 24px; padding-right:10px; font-size: 12px; color:#999; width: 95%; overflow: hidden; border-bottom: 1px solid #f1f1f1;}
@@ -350,7 +350,7 @@ div.payment_desc h3 p { margin-top: 5px; }
 
 /*--- start of floors */
 .my-floor { width: 100%; background: #fff; min-height: 30px;}
-.my-floor ul.floors-content-left-ul { border-bottom: 1px solid #999; }
+.my-floor ul.floors-content-left-ul { border-bottom: 1px solid rgb(213,213,213); }
 .my-floor ul.floors-content-left-ul li.first { float: left; padding-left:15px;}
 .my-floor ul.floors-content-left-ul li h3 { font-size: 18px; font-weight:bold; }
 .my-floor ul.floors-content-left-ul li { float: right; height: 40px!important; line-height: 40px!important;}
