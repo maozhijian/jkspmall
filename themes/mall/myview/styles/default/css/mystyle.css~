@@ -234,7 +234,7 @@ div.payment_desc h3 p { margin-top: 5px; }
 
  /* end of cart -- */
 
-.other { width: 100%;  border: 1px solid #e6e6e6; border-top:2px solid #606060; }
+.other { width: 100%;  border: 1px solid #e6e6e6; border-top:2px solid #e6e6e6; }
 .other h2 { line-height: 20px; font-size: 12px; padding-left:9px; font-weight: normal!important; padding-top: 7px;color:#606060; padding-bottom: 7px;}
 
 .notice-part ul { margin-left:10px; overflow: hidden;}
