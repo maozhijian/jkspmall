@@ -234,8 +234,8 @@ div.payment_desc h3 p { margin-top: 5px; }
 
  /* end of cart -- */
 
-.other { width: 100%;  border: 1px solid #e6e6e6;  }
-.other h2 { line-height: 20px; font-size: 12px; padding-left:9px; font-weight: normal!important; padding-top: 7px;color:rgb(170,170,170); padding-bottom: 7px;}
+.other { width: 100%;  border: 1px solid #e6e6e6; border-top:2px solid #606060; }
+.other h2 { line-height: 20px; font-size: 12px; padding-left:9px; font-weight: normal!important; padding-top: 7px;color:#606060; padding-bottom: 7px;}
 
 .notice-part ul { margin-left:10px; overflow: hidden;}
 .notice-part ul li { line-height: 24px; height: 24px; padding-right:10px; font-size: 12px; color:#999; width: 95%; overflow: hidden; border-bottom: 1px solid #f1f1f1;}
