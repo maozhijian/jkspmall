@@ -375,6 +375,7 @@ div.payment_desc h3 p { margin-top: 5px; }
 
 /* -- write by maozhijian */
 .my-floor ul.floors-content-left-ul  {border-bottom:2px solid #e6e6e6;}
+.my-floor .floors-content-main-content ul li dl dt img {border:1px solid #e6e6e6; }
 /* -- end of maozhijian */
 
 /* -- start of article-index --*/
