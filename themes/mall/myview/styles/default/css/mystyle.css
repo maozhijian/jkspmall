@@ -57,10 +57,10 @@ a:hover {
 .main-banner { width: 935px;  float:left; margin-top: 10px; }
 
 div.content-main-main { float:left;margin-top: 30px;width: 100%; margin-bottom:100px;}
-div.floors { float: left; width: 701px; }
+div.floors { float: left; width: 714px; }
 div.other { width: 219px;float: right; margin-top: 54px; }
 div.other-third { margin-top: 20px;}
-div.my-floor { width: 100%;  float: left; margin-top: 15px;  margin-bottom: 5px; overflow: hidden;}
+div.my-floor { width: 100%;  float: left; margin-top: 14px;  margin-bottom: 5px; overflow: hidden;}
 div.my-first-floor { }
 
 #footer { float: left; width: 100%; margin-top: 20px; }
