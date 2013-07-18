@@ -27,9 +27,9 @@ imgUping.src = upimg;
                         echo $this->_var['my_tmp'];
   
                     } else {
-                        
-                        $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
                         print_r($this->_var['_curlocal']);
+                        $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
+                        
                     }//End Of IF-Else
                     ?>
                     {$my_tmp.text} </b>(共 {$page_info.item_count} 件)
