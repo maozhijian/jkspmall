@@ -27,7 +27,7 @@ imgUping.src = upimg;
                         echo $this->_var['my_tmp'];
   
                     } else {
-                        print_r($this->_var['_curlocal']);
+                       
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
                         
                     }//End Of IF-Else
