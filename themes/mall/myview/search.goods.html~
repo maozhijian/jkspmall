@@ -57,8 +57,7 @@ imgUping.src = upimg;
                             
                              if(
                                  (strcmp($this->_var['my_tmp']['text'],$gyyp)==0)
-                                 ||(strcmp($this->_var['my_tmp']['text'],$ylqx)==0)
-                                 ||(strcmp($this->_var['my_tmp']['text'],$yqyb)==0)
+                               
                                ){
                                        $_SESSION['f_p1']=$this->_var['my_tmp']['text'];
                                        
