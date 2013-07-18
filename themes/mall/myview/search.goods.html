@@ -28,13 +28,18 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        if($this->_var['my_tmp']['text']!='工业用品'||$this->_var['my_tmp']['text']!='全部分类')
+                        if($this->_var['my_tmp']['text']!='工业用品'||$this->_var['my_tmp']['text']!='仪器仪表'||$this->_var['my_tmp']['text']!='医疗器械')
                         {  
                            $_f_p=$this->_var['my_tmp']['text'];
-                           
+                           echo $_f_p;
+                        }
+                        elseif($this->_var['my_tmp']['text']=='工业用品')
+                       {
+                           echo $_f_p;                                    
                         }
                         
-                           echo $_f_p;
+                        
+                           
                     }//End Of IF-Else
                     ?>
                      </b>(共 {$page_info.item_count} 件)
