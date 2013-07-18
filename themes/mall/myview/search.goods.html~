@@ -35,12 +35,12 @@ imgUping.src = upimg;
                         if((strcmp($this->_var['my_tmp']['text'],$gyyp)!=0)&&(strcmp($this->_var['my_tmp']['text'],$qbfl)!=0)){
                          
                            $_SESSION['f_p2']=$this->_var['my_tmp']['text'];
-                           echo '1'.$_SESSION['f_p2'];
+                           echo ''.$_SESSION['f_p2'];
                         }
                         elseif((strcmp($this->_var['my_tmp']['text'],$gyyp)==0)&&(strcmp($_SESSION['f_p1'],$qbfl)==0))
                         {   
                             $_SESSION['f_p1']=$this->_var['my_tmp']['text'];
-                            echo '5'.$_SESSION['f_p1'];
+                            echo ''.$_SESSION['f_p1'];
                             
                         }
                         else{
@@ -49,12 +49,12 @@ imgUping.src = upimg;
                              if(strcmp($this->_var['my_tmp']['text'],$gyyp)==0){
                                        $_SESSION['f_p1']=$this->_var['my_tmp']['text'];
                                        
-                                       echo '2'.$_SESSION['f_p2'];
+                                       echo ''.$_SESSION['f_p2'];
                                      }
                              elseif((strcmp($this->_var['my_tmp']['text'],$qbfl)==0)&&(strcmp($_SESSION['f_p1'],$qbfl)!=0))
                                      { 
                                         
-                                        echo '3'.$_SESSION['f_p1'];
+                                        echo ''.$_SESSION['f_p1'];
                                         	
                                      }
                         }
