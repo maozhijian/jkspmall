@@ -46,7 +46,7 @@ imgUping.src = upimg;
                                      }
                              elseif(strcmp($this->_var['my_tmp']['text'],$qbfl)==0)
                                      { 
-                                        $_SESSION['f_p1']=$this->_var['my_tmp']['text'];
+                                        
                                         echo '3'.$_SESSION['f_p1'];
                                      }
                         }
