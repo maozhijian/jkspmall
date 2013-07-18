@@ -34,7 +34,11 @@ imgUping.src = upimg;
                            $_f_p=$this->_var['my_tmp']['text'];
                            echo $_f_p;
                         }
-                        elseif($this->_var['my_tmp']['text']==$gyyp)
+                        elseif($this->_var['my_tmp']['text']==$gyyp){
+                            
+                           
+                           echo $_f_p;
+                        }
                         
                     }//End Of IF-Else
                     ?>
