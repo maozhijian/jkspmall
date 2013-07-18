@@ -17,7 +17,7 @@ imgUping.src = upimg;
         {include file=curlocal.html}
         <div class="content-main-head">
             <div class="content-main-head-goods-category">
-                <!-- 子分类 list//{$my_tmp.text}   -- >
+                <!-- 子分类 list  被删掉的在这{$my_tmp.text}   -- >
                 <h2>
                     <b style="font-size: 23px;">
                     <?php
