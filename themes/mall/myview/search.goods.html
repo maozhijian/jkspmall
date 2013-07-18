@@ -32,12 +32,12 @@ imgUping.src = upimg;
                         echo strcmp($this->_var['my_tmp']['text'],$gyyp);	
                         if(strcmp($this->_var['my_tmp']['text'],$gyyp)!=0){
                          
-                           $_f_p=$this->_var['my_tmp']['text'];
-                           echo '1'.$_f_p;
+                           $_SESSION['f_p']=$this->_var['my_tmp']['text'];
+                           echo '1'.$_SESSION['f_p'];
                         }
                         elseif(strcmp($this->_var['my_tmp']['text'],$gyyp)==0){
                             
-                           echo '2'.$_f_p;
+                           echo '2'.$_SESSION['f_p'];
                         }
                         
                     }//End Of IF-Else
