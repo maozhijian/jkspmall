@@ -31,7 +31,7 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        print_r($this->_var['_curlocal']); 
+                        print_r($this->_var['_curlocal'])[2]; 
                         if((strcmp($this->_var['my_tmp']['text'],$gyyp)!=0)&&(strcmp($this->_var['my_tmp']['text'],$qbfl)!=0)){
                          
                            $_SESSION['f_p2']=$this->_var['my_tmp']['text'];
