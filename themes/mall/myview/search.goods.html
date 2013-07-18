@@ -21,6 +21,7 @@ imgUping.src = upimg;
                 <h2>
                     <b style="font-size: 23px;">
                     <?php
+                    $gyyp='工业用品';
                     if( ! empty($_GET['keyword']) ) {
                         
                         $this->_var['my_tmp'] = $_GET['keyword'];
@@ -28,8 +29,17 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        $gyyp='工业用品';
-                        echo strcmp($gyyp,$this->_var['my_tmp']['text']);
+                        if($this->_var['my_tmp']['text']!=$gyyp){
+                         
+                           $_f_p=$this->_var['my_tmp']['text'];
+                           echo $_f_p;
+                        }
+                        elseif($this->_var['my_tmp']['text']==$gyyp){
+                            
+                           
+                           echo $_f_p;
+                        }
+                        
                     }//End Of IF-Else
                     ?>
                      </b>(共 {$page_info.item_count} 件)
