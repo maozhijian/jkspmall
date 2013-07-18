@@ -36,7 +36,6 @@ imgUping.src = upimg;
                         }
                         elseif($this->_var['my_tmp']['text']==$gyyp){
                             
-                           
                            echo $_f_p;
                         }
                         
