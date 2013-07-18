@@ -28,7 +28,8 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        echo $this->_var['my_tmp']['text'];     
+                        $gyyp='工业用品';
+                        
                     }//End Of IF-Else
                     ?>
                      </b>(共 {$page_info.item_count} 件)
