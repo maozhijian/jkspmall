@@ -22,8 +22,10 @@ imgUping.src = upimg;
                     <b style="font-size: 23px;">
                     <?php
                     if( ! empty($_GET['keyword']) ) {
-                        echo $_GET['keyword'];
+                        
                         $this->_var['my_tmp'] = $_GET['keyword'];
+                        echo $this->_var['my_tmp'];
+  
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
                     }//End Of IF-Else
