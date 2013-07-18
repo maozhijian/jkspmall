@@ -1,7 +1,7 @@
 {include file=header.html}
 <?php
   $qbfl='全部分类';
-  $_SESSION['f_p1']=$qbfk;
+  
 ?>
 
 <div id="content">
