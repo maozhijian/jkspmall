@@ -26,7 +26,7 @@ imgUping.src = upimg;
                         $this->_var['my_tmp'] = $_GET['keyword'];
                         //write by Maozhijian
                         echo $this->_var['my_tmp'];
-                       /* {$my_tmp.text}*/
+                       // {$my_tmp.text}
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
