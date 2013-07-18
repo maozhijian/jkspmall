@@ -17,7 +17,7 @@ imgUping.src = upimg;
         {include file=curlocal.html}
         <div class="content-main-head">
             <div class="content-main-head-goods-category">
-                <!-- 子分类 list -->
+                <!-- 子分类 list//{$my_tmp.text}   -- >
                 <h2>
                     <b style="font-size: 23px;">
                     <?php
@@ -25,13 +25,12 @@ imgUping.src = upimg;
                         
                         $this->_var['my_tmp'] = $_GET['keyword'];
                         echo $this->_var['my_tmp'];
-                        //{$my_tmp.text} 
+                        
                     } else {
                         
                         
 
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        print_r($this->_var['my_tmp']);
                         
                     }//End Of IF-Else
                     ?>
