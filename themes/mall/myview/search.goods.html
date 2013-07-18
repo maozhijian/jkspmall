@@ -25,10 +25,13 @@ imgUping.src = upimg;
                         
                         $this->_var['my_tmp'] = $_GET['keyword'];
                         echo $this->_var['my_tmp'];
-  
+                        //{$my_tmp.text} 
                     } else {
-                       
+                        
+                        
+
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
+                        print_r($this->_var['my_tmp']);
                         
                     }//End Of IF-Else
                     ?>
