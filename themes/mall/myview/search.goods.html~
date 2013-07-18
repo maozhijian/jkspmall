@@ -17,7 +17,7 @@ imgUping.src = upimg;
         {include file=curlocal.html}
         <div class="content-main-head">
             <div class="content-main-head-goods-category">
-                <!-- 子分类 list 被删除的代码位于标签b结束前{$my_tmp.text} -->
+                <!-- 子分类 list 被删除的代码位于标签b结束前 $my_tmp.text  周围用大括号包起来 -->
                 <h2>
                     <b style="font-size: 23px;">
                     <?php
