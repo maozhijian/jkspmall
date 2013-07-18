@@ -28,7 +28,7 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        if($this->_var['my_tmp']['text']!="工业用品"||$this->_var['my_tmp']['text']!='仪器仪表'||$this->_var['my_tmp']['text']!='医疗器械')
+                        if($this->_var['my_tmp']['text']!='工业用品'||$this->_var['my_tmp']['text']!='仪器仪表'||$this->_var['my_tmp']['text']!='医疗器械')
                         {  
                            echo $this->_var['my_tmp']['text'].'</br>';
                            $_f_p=$this->_var['my_tmp']['text'];
