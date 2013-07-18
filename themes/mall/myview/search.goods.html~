@@ -22,6 +22,7 @@ imgUping.src = upimg;
                     <b style="font-size: 23px;">
                     <?php
                     if( ! empty($_GET['keyword']) ) {
+                        echo $_GET['keyword'];
                         $this->_var['my_tmp'] = $_GET['keyword'];
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
@@ -41,7 +42,7 @@ imgUping.src = upimg;
                         <!-- 如果分类数多于十个 需要展开 -->
                         <!-- {if $category_count gt 10} -->
                         <li><input style="font-size:12px;padding:0 4px 0 4px;margin:0 0 3px 0;" 
-                                   type="button btn-link btn" class="brands_btn" value="{$lang.view_all_category}" id="show_category" /></li>
+                                   type="button" class="brands_btn" value="{$lang.view_all_category}" id="show_category" /></li>
                         <!-- {/if} -->
                     </ul>
                 </div>
