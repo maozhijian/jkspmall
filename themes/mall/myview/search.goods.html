@@ -29,15 +29,15 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        echo strcmp($this->_var['my_tmp']['text'],$gyyp);
-                        if($this->_var['my_tmp']['text']!=$gyyp){
+                        echo strcmp($this->_var['my_tmp']['text'],$gyyp);	
+                        if(strcmp($this->_var['my_tmp']['text'],$gyyp)!=0){
                          
                            $_f_p=$this->_var['my_tmp']['text'];
-                           echo $_f_p;
+                           echo '1'.$_f_p;
                         }
-                        elseif($this->_var['my_tmp']['text']==$gyyp){
+                        elseif(strcmp($this->_var['my_tmp']['text'],$gyyp)==0){
                             
-                           echo $_f_p;
+                           echo '2'.$_f_p;
                         }
                         
                     }//End Of IF-Else
