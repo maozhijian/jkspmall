@@ -28,14 +28,12 @@ imgUping.src = upimg;
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
-                        if($this->_var['my_tmp']['text']!='工业用品')
+                        if($this->_var['my_tmp']['text']!='工业用品'||$this->_var['my_tmp']['text']!='全部分类')
                         {  
                            $_f_p=$this->_var['my_tmp']['text'];
+                           
+                        }
                            echo $_f_p;
-                        }
-                        else {
-                           echo $this->_var['my_tmp']['text'];
-                        }
                     }//End Of IF-Else
                     ?>
                      </b>(共 {$page_info.item_count} 件)
