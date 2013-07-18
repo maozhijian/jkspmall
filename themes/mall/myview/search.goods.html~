@@ -17,7 +17,7 @@ imgUping.src = upimg;
         {include file=curlocal.html}
         <div class="content-main-head">
             <div class="content-main-head-goods-category">
-                <!-- 子分类 list  被删掉的在这{$my_tmp.text}   -- >
+                <!-- 子分类 list  被删掉的在这   -- >
                 <h2>
                     <b style="font-size: 23px;">
                     <?php
@@ -34,7 +34,7 @@ imgUping.src = upimg;
                         
                     }//End Of IF-Else
                     ?>
-                    </b>(共 {$page_info.item_count} 件)
+                    {$my_tmp.text}</b>(共 {$page_info.item_count} 件)
                 </h2>
                 <div class="side_textlist">
                     <ul ectype="ul_category">
