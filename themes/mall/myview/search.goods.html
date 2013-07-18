@@ -24,7 +24,7 @@ imgUping.src = upimg;
                     if( ! empty($_GET['keyword']) ) {
                         
                         $this->_var['my_tmp'] = $_GET['keyword'];
-                         
+                        echo $this->_var['my_tmp'];
   
                     } else {
                         $this->_var['my_tmp'] = array_pop($this->_var['_curlocal']);
