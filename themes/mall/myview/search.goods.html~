@@ -69,7 +69,7 @@ imgUping.src = upimg;
                                         echo ''.$_SESSION['f_p1'];
                                         	
                                      }
-                        }/*
+                        }*/
                     }//End Of IF-Else
                     ?>
                      {$my_tmp.text}</b>(共 {$page_info.item_count} 件)
