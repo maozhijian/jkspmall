@@ -149,9 +149,8 @@ class ECBaseApp extends BaseApp
             $this->_session =& new MemcacheSession(SESSION_MEMCACHED, 'ECM_ID');
         }
         else
-        {  
-             
-            exit('Unkown session type.'SESSION_TYPE);
+        {
+            exit('Unkown session type.');
         }
         define('SESS_ID', $this->_session->get_session_id());
 
