@@ -1,5 +1,5 @@
 <?php
-
+ 
 define('ROOT_PATH', dirname(__FILE__));
 include(ROOT_PATH . '/eccore/ecmall.php');
 
