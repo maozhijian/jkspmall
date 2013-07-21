@@ -2,7 +2,7 @@
         <div class="module_common">
             <h2 class="common_title">专区简介</h2>
             <div class="wrap">
-                <p><img style="width: 100%; height: 70px; margin-top: 10px; margin-bottom: 10px;" src="{$store.store_logo}"/></p>
+                <p><a href="{url app=store&id=$store.store_id&act=search}"><img style="width: 100%; height: 70px; margin-top: 10px; margin-bottom: 10px;" src="{$store.store_logo}"/></a></p>
                 <div class="desc">{$store.description|escape:editor} </div>
             </div>
         </div>
