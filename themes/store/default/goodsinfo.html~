@@ -153,8 +153,7 @@ var goodsspec = new goodsspec(specs, specQty, defSpec);
                     </label>
                 </li>
                 <li>
-                    <p style=" font-size: 12px;color: #999; padding-left:12px;">注：若您需要了解更多商品信息 请务必联系我们：</p>
-                    <p style=" font-size: 14px;color:rgb(155,35,35);">4001000501</p>
+                    <p style=" font-size: 12px;color: #999; padding-left:12px;">注：在购物车中也可修改商品数量&nbsp;&nbsp;&nbsp;同一商品请勿重复加入购物车</p>
                 </li>
             </ul>
             <!--{if $goods.spec_qty gt 0}-->
