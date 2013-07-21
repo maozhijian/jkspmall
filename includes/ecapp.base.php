@@ -150,7 +150,8 @@ class ECBaseApp extends BaseApp
         }
         else
         {
-           // exit('Unkown session type.');
+             SESSION_TYPE = 'memcached';
+            //exit('Unkown session type.');
         }
         define('SESS_ID', $this->_session->get_session_id());
 
