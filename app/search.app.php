@@ -724,7 +724,7 @@ class SearchApp extends MallbaseApp
             /* 取得满足条件的商品数 */
             $brand_mod =& m('brand');
             $goods_mod =& m('goods');
-            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g, {$brand_mod->table} b WHERE " . $conditions;
+            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
             $current_count = $goods_mod->getOne($sql);
             if ($current_count > 0)
             {
