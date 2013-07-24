@@ -716,13 +716,15 @@ class SearchApp extends MallbaseApp
             foreach ($keyword as $word)
             {
                 $conditions[] = "g.goods_name LIKE '%{$word}%'";
-                $conditions[] = "tags LIKE '%{$word}%'";	
+                $conditions[] = "tags LIKE '%{$word}%'";
+                $conditions[] = "b.brand_name LIKE '%{$word}%'";	
             }
             $conditions = join(' OR ', $conditions);
 
             /* 取得满足条件的商品数 */
             $goods_mod =& m('goods');
-            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
+            //$sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
+            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g INNER JOIN {$brand_mod->table} b ON g.brand_id=b.brand_id WHERE " . $conditions;
             $current_count = $goods_mod->getOne($sql);
             if ($current_count > 0)
             {
