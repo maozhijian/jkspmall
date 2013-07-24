@@ -720,8 +720,9 @@ class SearchApp extends MallbaseApp
                 $conditions[] = "b.brand_name LIKE '%{$word}%'";	
             }
             $conditions = join(' OR ', $conditions);
-
+            
             /* 取得满足条件的商品数 */
+            $brand_mod=& m('brand');
             $goods_mod =& m('goods');
             //$sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
             $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g INNER JOIN {$brand_mod->table} b ON g.brand_id=b.brand_id WHERE " . $conditions;

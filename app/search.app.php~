@@ -716,7 +716,8 @@ class SearchApp extends MallbaseApp
             foreach ($keyword as $word)
             {
                 $conditions[] = "g.goods_name LIKE '%{$word}%'";
-                $conditions[] = "tags LIKE '%{$word}%'";	
+                $conditions[] = "tags LIKE '%{$word}%'";
+                $conditions[] = "b.brand_name LIKE '%{$word}%'";	
             }
             $conditions = join(' OR ', $conditions);
 
