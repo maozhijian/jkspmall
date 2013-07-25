@@ -77,7 +77,7 @@
                     <ul class="receive_add" shipping_id="{$shipping_method.shipping_id}" >
                         <li class="radio"><input type="radio" name="shipping_id" value="{$shipping_method.shipping_id}" /></li>
                         <li class="fashion" style="font-weight: normal">{$shipping_method.shipping_name|escape}</li>
-                        <li class="pay" style="font-weight: normal">{$lang.shipping_fee}:&nbsp;<span style="display:inline;" class="money" ectype="shipping_fee">&yen; 0.00 <p style="color:red;font-size:12px;">(配送费用会在下单后为您修改)</p></span></li>
+                        <li class="pay" style="font-weight: normal;display:inline;">{$lang.shipping_fee}:&nbsp;<span style="display:inline;" class="money" ectype="shipping_fee">&yen; 0.00 <p style="color:red;font-size:12px;">(配送费用会在下单后为您修改)</p></span></li>
                         <li class="explain"  style="font-weight: normal">{$shipping_method.shipping_desc|escape}</li>
                     </ul>
                     <!--{/foreach}-->
