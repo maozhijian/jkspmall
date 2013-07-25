@@ -22,7 +22,7 @@
                  </li>
             <!--{/foreach} -->
 
-                 <li style="border-top:2px solid #f1f1f1; height:70px; cursor: auto;">
+                 <li style="border-top:2px solid #f1f1f1; height:130px; cursor: auto;">
                     <h3 style="">
                         <p style="height: 40px;line-height: 50px; padding: 0!important; ">
                             
