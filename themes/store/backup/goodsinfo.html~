@@ -39,8 +39,7 @@ function add_to_cart(spec_id, quantity)
         }
         else
         {
-             alert(data.msg.'hehe');
-            //alert(data.msg);
+            alert(data.msg);
         }
     });
 }
