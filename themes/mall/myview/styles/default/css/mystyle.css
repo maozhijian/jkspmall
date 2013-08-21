@@ -45,10 +45,10 @@ a:hover {
 
 #content { width: 1180px; margin:0 auto; }
 .content { width: 1180px; margin:0 auto; }
-#content-left { width:240px; float:left; min-height: 1px; }
+#content-left { width:240px; float:left; min-height: 1px;margin-top:-30px; }
 
 
-#content-main { width: 935px; float: left; }
+#content-main { width: 935px; float: right; }
 
 .bigad { width: 100%; float: left; height:350px; }
 .bigad img { height:350px!important; width: 100%; }
@@ -229,7 +229,7 @@ div.payment_desc h3 p { margin-top: 5px; }
 /*----widget -----*/
 
 .categroy { background: #fff; position: relative; }
-.myassort_wrap { position: relative; top:0px; left: 0px; -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); z-index: 200; border-bottom: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; }
+.myassort_wrap { position: relative; top:0px; left: 0px; -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2),3px 3px 5px rgba(0,0,0,0.2); box-shadow: 5px 5px 5px rgba(0,0,0,0.2),3px 3px 5px rgba(0,0,0,0.2); z-index: 200; border-bottom: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; }
 .myassort_child_wrap { position:relative; }
 
  /* end of cart -- */
@@ -315,7 +315,7 @@ div.payment_desc h3 p { margin-top: 5px; }
 /*----widget -----*/
 
 .categroy { background: #fff; position: relative; }
-.myassort_wrap { position: relative; top:0px; left: 0px; -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); z-index: 200; border-bottom: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; }
+.myassort_wrap { position: relative; top:0px; left: 0px; -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2),3px 3px 5px rgba(0,0,0,0.2); box-shadow: 5px 5px 5px rgba(0,0,0,0.2),3px 3px 5px rgba(0,0,0,0.2); z-index: 200; border-bottom: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; }
 .myassort_child_wrap { position:relative; left: 240px; top:-440px; z-index: 150; width: 250px; }
 
 .myassort_child_wrap_submenu { min-height:300px; width: 240px; float: left; background: white; -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); box-shadow: 5px 5px 5px rgba(0,0,0,0.2),1px -3px 5px rgba(0,0,0,0.2); border-bottom: 1px solid #e6e6e6; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; }
