@@ -29,7 +29,7 @@ a:hover {
 #head .wrap { float: left; margin-left:200px; margin-top : 10px; }
 #head .menu { float : right; width: 250px; }
 #head .menu ul { overflow: visible; float: right;}
-#head .menu ul li a { color:#303030;  }
+#head .menu ul li a { color:#303030;  } 
 #head .menu p{ height:37px; line-height: 37px;  }
 
 #nav { height: 30px; width:100%; background: #303030; color: #fff; }
