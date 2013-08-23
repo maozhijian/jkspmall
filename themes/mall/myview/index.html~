@@ -42,7 +42,13 @@
         {include file=footer.html}
     </div>
     
+   <img src="data/files/mall/template/201308232201303818.jpg" style=" position: absolute;
+    left: 1043px;
+     top: 1195px;"></img>
 
+      <img src="data/files/mall/template/201308232201302552.jpg" style=" position: absolute;
+     left: 331px;
+     top: 2752px;"></img>
 
 </div>
 
