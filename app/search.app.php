@@ -636,10 +636,11 @@ class SearchApp extends MallbaseApp
 
                 /* 按品牌统计 */
                 $sql = "SELECT g.brand, COUNT(*) AS count FROM {$table} WHERE" . $conditions . " AND g.brand > '' GROUP BY g.brand ORDER BY count DESC";
-                $by_brands = $goods_mod->db->getAllWithIndex($sql, 'brand');
+                $data['by_brand'] = $goods_mod->getAll($sql);
+                
                 
                 /* 滤去未通过商城审核的品牌 */
-                if ($by_brands)
+               /* if ($by_brands)
                 {
                     $m_brand = &m('brand');
                     $brand_conditions = db_create_in(addslashes_deep(array_keys($by_brands)), 'brand_name');
@@ -651,8 +652,8 @@ class SearchApp extends MallbaseApp
                             unset($by_brands[$k]);
                         }
                     }
-                }
-                $data['by_brand'] = $by_brands;
+                }*/
+               // $data['by_brand'] = $by_brands;
                 
                 
                 /* 按地区统计 */
@@ -719,9 +720,10 @@ class SearchApp extends MallbaseApp
                 $conditions[] = "g.goods_name LIKE '%{$word}%'";
                 $conditions[] = "tags LIKE '%{$word}%'";
                 $conditions[] = "g.brand LIKE '%{$word}%'";
-                $conditions[] = "gs.sku LIKE '%{$word}%'";
+              //  $conditions[] = "gs.sku LIKE '%{$word}%'";
                 //$table = " {$goods_mod->table} g LEFT JOIN {$store_mod->table} s ON g.store_id = s.store_id";
             }
+            
             $conditions = join(' OR ', $conditions);
             
             /* 取得满足条件的商品数 */
@@ -729,7 +731,7 @@ class SearchApp extends MallbaseApp
             
             $goods_mod =& m('goods');
            // $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
-            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions;
+            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions."OR gs.sku LIKE '%{$word}%'";
             $current_count = $goods_mod->getOne($sql);
             if ($current_count > 0)
             {
@@ -750,7 +752,7 @@ class SearchApp extends MallbaseApp
                     if (($current_count / $total_count) < MAX_HIT_RATE)
                     {
                         /* 取得满足条件的商品id */
-                        $sql = "SELECT g.goods_id FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions;
+                        $sql = "SELECT g.goods_id FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions."OR gs.sku LIKE '%{$word}%'";
                         $ids = $goods_mod->getCol($sql);
                         $conditions = 'g.goods_id' . db_create_in($ids);
                     }
