@@ -131,14 +131,14 @@ var goodsspec = new goodsspec(specs, specQty, defSpec);
 
         <div class="handle">
             <!--{if $goods.spec_qty gt 0}-->
-            <ul>
+            <ul class="ul-spec">
                 <li class="handle_title">
                     <label class="control-label" >{$goods.spec_name_1|escape}:</label>
                 </li>
             </ul>
             <!--{/if}-->
             <!--{if $goods.spec_qty gt 1}-->
-            <ul>
+            <ul class="ul-spec">
                 <li class="handle_title">
                     <label class="control-label" >{$goods.spec_name_2|escape}:</label>
                 </li>

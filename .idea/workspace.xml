@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/store/default/goodsinfo.html" afterPath="$PROJECT_DIR$/themes/store/default/goodsinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css" afterPath="$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433284985" ignored="false" />
     <file path="/search.goods.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371405504819" ignored="false" />
     <file path="/widget.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370791110557" ignored="false" />
-    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377435879337" ignored="false" />
+    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436346960" ignored="false" />
     <file path="/footer.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371404924307" ignored="false" />
     <file path="/my_goods.form.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433914973" ignored="false" />
+    <file path="/goodsinfo.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436309105" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +33,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mystyle.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="136" selection-start="9367" selection-end="9367" vertical-scroll-proportion="0.0">
+            <state line="151" column="64" selection-start="8989" selection-end="8989" vertical-scroll-proportion="0.1551095">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="goodsinfo.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="goodsinfo.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="30" selection-start="5733" selection-end="5733" vertical-scroll-proportion="0.3659004">
+            <state line="133" column="25" selection-start="4692" selection-end="4692" vertical-scroll-proportion="-2.4230769">
               <folding>
+                <element signature="n#style#0;n#label#1;n#li#0;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#li#1;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -82,6 +84,7 @@
         <option value="$PROJECT_DIR$/themes/mall/default/my_goods.form.html" />
         <option value="$PROJECT_DIR$/themes/mall/myview/my_goods.form.html" />
         <option value="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/themes/store/default/goodsinfo.html" />
         <option value="$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css" />
       </list>
     </option>
@@ -482,19 +485,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
+    <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="136" selection-start="9367" selection-end="9367" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="133" column="25" selection-start="4692" selection-end="4692" vertical-scroll-proportion="-2.4230769">
+          <folding>
+            <element signature="n#style#0;n#label#1;n#li#0;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#li#1;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
+    <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="30" selection-start="5733" selection-end="5733" vertical-scroll-proportion="0.3659004">
-          <folding>
-            <element signature="n#style#0;n#p#0;n#li#1;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="151" column="64" selection-start="8989" selection-end="8989" vertical-scroll-proportion="0.1551095">
+          <folding />
         </state>
       </provider>
     </entry>
