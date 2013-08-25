@@ -150,9 +150,9 @@ div.ware_info div.ware_text ul li label.controls input { width: 70px; margin-lef
 div.ware_info div.ware_text div.handle  { overflow: hidden;margin-top:10px!important; padding-left:10px; width: 100%; margin-top: 5px; margin-bottom: 5px; background: #f5f5f5; padding-top: 5px; padding-bottom: 5px;}
 div.ware_info div.ware_text div.handle .ul-sepc { width: 360px; overflow: hidden; color: #7a7a7a; margin-bottom: 10px; }
 div.ware_info div.ware_text div.handle .ul-spec li {width: auto!important; float: left; cursor: pointer; }
-div.ware_info div.ware_text div.handle .ul-spec li.handle_title { padding-top: 3px; }
-div.ware_info div.ware_text div.handle .ul-sepc li.solid { padding: 2px 4px; border: 1px solid #ff5400; color: #fff; margin-right: 8px; background: #ff8e56; }
-div.ware_info div.ware_text div.handle .ul-sepc li.dotted { padding: 2px 4px; border: 1px dotted #ff5400; margin-right: 8px; background: #fff; }
+div.ware_info div.ware_text div.handle .ul-spec li.handle_title { padding-top: 3px; margin-right:10px;}
+div.ware_info div.ware_text div.handle .ul-spec li.solid { padding: 2px 4px; border: 1px solid #ff5400; color: #fff; margin-right: 8px; background: #ff8e56; }
+div.ware_info div.ware_text div.handle .ul-spec li.dotted { padding: 2px 4px; border: 1px dotted #ff5400; margin-right: 8px; background: #fff; }
 
 div.ware_info div.ware_text ul.ware_btn { width: 380px; margin:0 auto; margin-top: 30px; }
 div.ware_info div.ware_text ul.ware_btn li { width: 144px; margin-left:20px; height: 56px; display: block; float: left; overflow: hidden; }
