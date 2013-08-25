@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/store/default/goodsinfo.html" afterPath="$PROJECT_DIR$/themes/store/default/goodsinfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css" afterPath="$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css" />
     </list>
     <ignored path="runmall.iws" />
@@ -10,7 +9,7 @@
     <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433284985" ignored="false" />
     <file path="/search.goods.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371405504819" ignored="false" />
     <file path="/widget.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370791110557" ignored="false" />
-    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436346960" ignored="false" />
+    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436551328" ignored="false" />
     <file path="/footer.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371404924307" ignored="false" />
     <file path="/my_goods.form.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433914973" ignored="false" />
     <file path="/goodsinfo.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436309105" ignored="false" />
@@ -36,7 +35,7 @@
       <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="64" selection-start="8989" selection-end="8989" vertical-scroll-proportion="0.1551095">
+            <state line="151" column="72" selection-start="8997" selection-end="8997" vertical-scroll-proportion="0.80656934">
               <folding />
             </state>
           </provider>
@@ -497,7 +496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="64" selection-start="8989" selection-end="8989" vertical-scroll-proportion="0.1551095">
+        <state line="151" column="72" selection-start="8997" selection-end="8997" vertical-scroll-proportion="0.80656934">
           <folding />
         </state>
       </provider>
