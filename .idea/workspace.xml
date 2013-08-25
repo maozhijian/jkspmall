@@ -12,7 +12,7 @@
     <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436833677" ignored="false" />
     <file path="/footer.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371404924307" ignored="false" />
     <file path="/my_goods.form.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433914973" ignored="false" />
-    <file path="/goodsinfo.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436965336" ignored="false" />
+    <file path="/goodsinfo.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377437063097" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="goodsinfo.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="40" selection-start="6179" selection-end="6179" vertical-scroll-proportion="0.8790036">
+            <state line="164" column="75" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.7882562">
               <folding>
                 <element signature="n#style#0;n#label#1;n#li#0;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#li#1;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -492,7 +492,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="40" selection-start="6179" selection-end="6179" vertical-scroll-proportion="0.8790036">
+        <state line="164" column="75" selection-start="6238" selection-end="6238" vertical-scroll-proportion="0.7882562">
           <folding>
             <element signature="n#style#0;n#label#1;n#li#0;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#li#1;n#ul#2;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
