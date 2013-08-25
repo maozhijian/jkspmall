@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" afterPath="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/default/my_goods.form.html" afterPath="$PROJECT_DIR$/themes/mall/default/my_goods.form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mall/myview/my_goods.form.html" afterPath="$PROJECT_DIR$/themes/mall/myview/my_goods.form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="runmall.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371403271383" ignored="false" />
+    <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377419705672" ignored="false" />
     <file path="/search.goods.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371405504819" ignored="false" />
     <file path="/widget.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370791110557" ignored="false" />
     <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371405373952" ignored="false" />
     <file path="/footer.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371404924307" ignored="false" />
+    <file path="/my_goods.form.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377419778316" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,47 +33,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
+      <file leaf-file-name="my_goods.form.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/mall/myview/my_goods.form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="46" selection-start="6083" selection-end="6083" vertical-scroll-proportion="0.6938776">
-              <folding />
+            <state line="158" column="74" selection-start="7303" selection-end="7303" vertical-scroll-proportion="-95.46154">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#p#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#b#0;n#p#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <marker date="1377419988549" expanded="true" signature="1976:1987" placeholder="..." />
+                <marker date="1377419988549" expanded="true" signature="2141:2164" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.goods.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/mall/myview/search.goods.html">
+      <file leaf-file-name="my_goods.form.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/mall/default/my_goods.form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="57" selection-start="11767" selection-end="11767" vertical-scroll-proportion="-13.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="left_category.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/mall/myview/left_category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="108" selection-start="1687" selection-end="1687" vertical-scroll-proportion="-11.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/store/default/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="66" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-15.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/mall/myview/footer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-15.730769">
-              <folding />
+            <state line="122" column="9" selection-start="4962" selection-end="4962" vertical-scroll-proportion="0.94107145">
+              <folding>
+                <marker date="1377417730175" expanded="false" signature="1976:1987" placeholder="..." />
+                <marker date="1377417730175" expanded="false" signature="2141:2164" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,6 +100,8 @@
         <option value="$PROJECT_DIR$/themes/mall/myview/footer.html" />
         <option value="$PROJECT_DIR$/themes/mall/myview/search.goods.html" />
         <option value="$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/themes/mall/default/my_goods.form.html" />
+        <option value="$PROJECT_DIR$/themes/mall/myview/my_goods.form.html" />
       </list>
     </option>
   </component>
@@ -138,6 +137,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,10 +173,6 @@
               <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -195,26 +191,8 @@
               <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myview" />
+              <option name="myItemId" value="backup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,84 +217,49 @@
               <option name="myItemId" value="myview" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="runmall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runmall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runmall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runmall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mall" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runmall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="external" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,6 +291,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="56d05384-56ac-442d-8bda-60a44fe1a04b" name="Default" comment="" />
@@ -364,7 +324,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2590909" sideWeight="0.912" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23712121" sideWeight="0.9521531" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -440,105 +400,108 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webroot/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="-5.230769" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/search.goods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="71" selection-start="10769" selection-end="10769" vertical-scroll-proportion="0.43392858" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/themes/mall/myview/styles/default/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="378" column="123" selection-start="22778" selection-end="22778" vertical-scroll-proportion="0.5221843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external/widgets/floors/config.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="5621" selection-end="5621" vertical-scroll-proportion="-12.384615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external/widgets/floors/main.widget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="440" selection-end="440" vertical-scroll-proportion="0.59336823" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external/widgets/static/widget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="54" selection-start="2276" selection-end="2276" vertical-scroll-proportion="0.03024911">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/external/widgets/floors/widget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="152" selection-start="2537" selection-end="2537" vertical-scroll-proportion="-17.653847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mall/myview/seller_order.index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="33" selection-start="11529" selection-end="11546" vertical-scroll-proportion="1.4519573">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/seller_groupbuy.cancel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/store/default/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="66" selection-start="2530" selection-end="2530" vertical-scroll-proportion="-15.076923">
-          <folding />
-        </state>
+        <state line="48" column="66" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.6672598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-15.730769">
-          <folding />
-        </state>
+        <state line="49" column="0" selection-start="2541" selection-end="2541" vertical-scroll-proportion="0.6975089" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/search.goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="57" selection-start="11767" selection-end="11767" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
+        <state line="267" column="57" selection-start="13905" selection-end="13905" vertical-scroll-proportion="0.4252669" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/left_category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="108" selection-start="1687" selection-end="1687" vertical-scroll-proportion="-11.769231">
-          <folding />
-        </state>
+        <state line="43" column="108" selection-start="2551" selection-end="2551" vertical-scroll-proportion="0.03024911" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mall/myview/styles/default/css/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="46" selection-start="6083" selection-end="6083" vertical-scroll-proportion="0.6938776">
-          <folding />
+        <state line="125" column="46" selection-start="6083" selection-end="6083" vertical-scroll-proportion="0.028911564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/myview/my_goods.index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/store/default/goodsinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="62" selection-start="4399" selection-end="4399" vertical-scroll-proportion="-0.11921708" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/store/backup/goodsinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="12" selection-start="6017" selection-end="6017" vertical-scroll-proportion="1.272242" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/default/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="773" selection-end="773" vertical-scroll-proportion="-8.5" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/default/my_goods.index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="10" selection-start="1357" selection-end="1357" vertical-scroll-proportion="39.23077" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/myview/spec_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="44" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.6049822" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/default/spec_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="347" selection-end="347" vertical-scroll-proportion="0.24199288" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/myview/my_goods.form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="74" selection-start="7303" selection-end="7303" vertical-scroll-proportion="-95.46154">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#p#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#p#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#b#0;n#p#0;n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#8;n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <marker date="1377419988549" expanded="true" signature="1976:1987" placeholder="..." />
+            <marker date="1377419988549" expanded="true" signature="2141:2164" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mall/default/my_goods.form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="9" selection-start="4962" selection-end="4962" vertical-scroll-proportion="0.94107145">
+          <folding>
+            <marker date="1377417730175" expanded="false" signature="1976:1987" placeholder="..." />
+            <marker date="1377417730175" expanded="false" signature="2141:2164" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
