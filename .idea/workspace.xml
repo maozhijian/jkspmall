@@ -9,7 +9,7 @@
     <file path="/Dummy.txt" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433284985" ignored="false" />
     <file path="/search.goods.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371405504819" ignored="false" />
     <file path="/widget.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1370791110557" ignored="false" />
-    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436749582" ignored="false" />
+    <file path="/mystyle.css" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436833677" ignored="false" />
     <file path="/footer.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1371404924307" ignored="false" />
     <file path="/my_goods.form.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377433914973" ignored="false" />
     <file path="/goodsinfo.html" changelist="56d05384-56ac-442d-8bda-60a44fe1a04b" time="1377436309105" ignored="false" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="mystyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="101" selection-start="9133" selection-end="9133" vertical-scroll-proportion="0.78061223">
+            <state line="152" column="66" selection-start="9098" selection-end="9098" vertical-scroll-proportion="0.78061223">
               <folding />
             </state>
           </provider>
@@ -495,7 +495,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/store/default/styles/default/mystyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="101" selection-start="9133" selection-end="9133" vertical-scroll-proportion="0.78061223">
+        <state line="152" column="66" selection-start="9098" selection-end="9098" vertical-scroll-proportion="0.78061223">
           <folding />
         </state>
       </provider>
