@@ -710,7 +710,8 @@ class SearchApp extends MallbaseApp
         }
 
         if ($conditions === false)
-        {
+        {   
+        	$gs_mod =& m('goodsspec');
             /* 组成查询条件 */
             $conditions = array();
             foreach ($keyword as $word)
@@ -718,15 +719,17 @@ class SearchApp extends MallbaseApp
                 $conditions[] = "g.goods_name LIKE '%{$word}%'";
                 $conditions[] = "tags LIKE '%{$word}%'";
                 $conditions[] = "g.brand LIKE '%{$word}%'";
-               	
+                $conditions[] = "gs.sku LIKE '%{$word}%'";
+                //$table = " {$goods_mod->table} g LEFT JOIN {$store_mod->table} s ON g.store_id = s.store_id";
             }
             $conditions = join(' OR ', $conditions);
             
             /* 取得满足条件的商品数 */
             //$brand_mod=& m('brand');
+            
             $goods_mod =& m('goods');
-            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
-           // $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g INNER JOIN {$brand_mod->table} b ON g.brand_id=b.brand_id WHERE " . $conditions;
+           // $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g WHERE " . $conditions;
+            $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions;
             $current_count = $goods_mod->getOne($sql);
             if ($current_count > 0)
             {
@@ -738,7 +741,7 @@ class SearchApp extends MallbaseApp
                     $total_count = $cache_server->get($key2);
                     if ($total_count === false)
                     {
-                        $sql = "SELECT COUNT(*) FROM {$goods_mod->table}";
+                        $sql = "SELECT COUNT(*) FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id";
                         $total_count = $goods_mod->getOne($sql);
                         $cache_server->set($key2, $total_count, SEARCH_CACHE_TTL);
                     }
@@ -747,7 +750,7 @@ class SearchApp extends MallbaseApp
                     if (($current_count / $total_count) < MAX_HIT_RATE)
                     {
                         /* 取得满足条件的商品id */
-                        $sql = "SELECT goods_id FROM {$goods_mod->table} g WHERE " . $conditions;
+                        $sql = "SELECT g.goods_id FROM {$goods_mod->table} g LEFT JOIN {$gs_mod->table} gs ON g.goods_id=gs.goods_id WHERE " . $conditions;
                         $ids = $goods_mod->getCol($sql);
                         $conditions = 'g.goods_id' . db_create_in($ids);
                     }
