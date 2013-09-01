@@ -8,31 +8,32 @@ class AddressModel extends BaseModel
     var $_name  = 'address';
 
     /* 表单自动验证 */
+    // in order to fill the address fill
     var $_autov = array(
         'user_id'   => array(
             'required'  => true,
         ),
         'consignee' => array(
             'required'  => true,
-            'filter'    => 'trim',
+            ///'filter'    => 'trim',
         ),
         'address'   => array(
-            'required'  => true,
-            'filter'    => 'trim',
+            #'required'  => true,
+            #'filter'    => 'trim',
         ),
         'region_id' => array(
-            'required'  => true,
-            'filter'    => 'intval',
+            #'required'  => true,
+            #'filter'    => 'intval',
         ),
         'region_name'   => array(
-            'required'  => true,
-            'filter'    => 'trim',
+            #'required'  => true,
+            #'filter'    => 'trim',
         ),
         'phone_tel' => array(
-            'reg'   => '/^[0-9\+(\s]{3,}[0-9\-)\s]{2,}[0-9]$/',      //电话号码至少6位
+            #'reg'   => '/^[0-9\+(\s]{3,}[0-9\-)\s]{2,}[0-9]$/',      //电话号码至少6位
         ),
         'phone_mob' => array(
-            'reg'   => '/\d{6}/',      //至少6位的数字
+            #'reg'   => '/\d{6}/',      //至少6位的数字
         ),
     );
 
