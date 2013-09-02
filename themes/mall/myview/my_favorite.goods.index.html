@@ -62,16 +62,28 @@ function add_to_cart(spec_id, quantity)
                     <!--{if $collect_goods}-->
                     <tr>
                         <th colspan="6">
+                            
                             <p class="position1 text-left">
                             <input type="checkbox" id="all2" class="checkall"/>
                                 <span class="all">{$lang.checkall}</span>
                                 <a href="javascript:void(0);" class="delete" uri="index.php?app=my_favorite&act=drop&type=goods" name="item_id" presubmit="confirm('{$lang.drop_confirm}')" ectype="batchbutton">{$lang.drop}</a>
+
                             </p>
-                            <p class="position2">
+                            
+                            
+  
+                        </th>
+                        
+                       
+
+                    </tr>
+                    
+                    <li>
+                                                                        <p class="position2">
                                 {include file=member.page.bottom.html}
                             </p>
-                        </th>
-                    </tr>
+                    </li>
+                    
                     <!--{/if}-->
                 </table>
             </div>
@@ -82,6 +94,10 @@ function add_to_cart(spec_id, quantity)
         <div class="adorn_right2"></div>
         <div class="adorn_right3"></div>
         <div class="adorn_right4"></div>
+                                                            <p class="position2">
+                                {include file=member.page.bottom.html}
+                            </p>
+        
         {include file=footer.html}
     </div>
     <div class="clear"></div>
