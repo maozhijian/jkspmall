@@ -115,8 +115,12 @@
                             $("input[name='phone_mob']").val("");
                             $("input[name='region_id']").val("");
                             $("input[name='region_name']").val("");
+                            //check on
+                            $("input[name='save_address']").attr('checked',true);
                             return;
                         }//End Of If-ELse
+                        $("input[name='save_address']").attr('checked',false);
+                        //check empty
                         for(k in addr_data){
                             switch(k){
                                 case 'consignee':
