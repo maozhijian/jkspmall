@@ -62,6 +62,9 @@ function openSubmenu(h1){
     h1.next('ul').css('display', '');
 }
 </script>
+
+
+
 {$_head_tags}
 </head>
 <body>
@@ -84,7 +87,23 @@ function openSubmenu(h1){
 
         <ul class="nav nav-pills">
             <li class=""><p>你好,{$visitor.user_name|escape}</p></li>
-            <li><a href="{url app=member&act=logout}"><i class="icon-signout" style="line-height: 20px;"></i>{$lang.logout}</a></li>
+           <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#" style="">用户中心<b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                    <!--{if $visitor.store_id}-->
+                    <li><a href="{url app=seller_order}">{$lang.order_manage}</a></li>
+                    <!--<li><a href="{url app=my_qa}">{$lang.my_qa}</a></li>-->
+                    <li><a href="{url app=my_goods}">{$lang.my_goods}</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <!--{/if}-->
+                    <li><a href="{url app=buyer_order}">{$lang.my_order}</a></li>
+                    <li><a href="{url app=my_favorite}">{$lang.favorite}</a></li>
+                    <li><a href="{url app=message&act=newpm}">{$lang.pm}<!--{if $new_message}-->({$new_message})<!--{/if}--></a></li>
+                    <li><a href="{url app=cart}">{$lang.shopping_cart} <strong id="cart_goods_kinds">{$cart_goods_kinds}</strong> {$lang.kind_of_goods}</a> </li>
+                    <li role="presentation" class="divider"></li>
+                    <li><a href="{url app=member&act=logout}"><i class="icon-signout"></i>{$lang.logout}</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
