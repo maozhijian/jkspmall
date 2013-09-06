@@ -1,0 +1,92 @@
+{include file=header.html}
+<script type="text/javascript" src="{lib file=search_brand.js}" charset="utf-8"></script>
+<script type="text/javascript">
+var upimg   = '{res file=images/up.gif}';
+var downimg = '{res file=images/down.gif}';
+imgUping = new Image();
+imgUping.src = upimg;
+</script>
+
+<div id="content">
+
+    <div id="content-left">
+        {include file=left_category.html}
+    </div>
+
+    <div id="content-main">
+       <div class="keyword">
+    <ul class="breadcrumb">
+
+            <li><a href=#>首页</a> <span class="divider">/<a >　所有品牌</a></span></li>
+
+    </ul>
+     </div>
+
+        <div class="content-main-head">
+          
+
+
+
+            <!-- {if !$filters.brand} -->
+            <div class="content-main-head-goods-category">
+                <h2><b style="font-size:20px;">所有品牌</b></h2>
+                    <ul ectype="ul_brand">
+                        <!--{foreach from=$brands item=row name=fe_brand}-->
+
+                        <li><a href="http://localhost:8080/runmall/index.php?act=index&app=search&keyword={$row.brand|escape:url}"  >{$row.brand|escape}</a> ({$row.count})</li>
+
+                        <li style="display:none"><a href="http://localhost:8080/runmall/index.php?act=index&app=search&keyword={$row.brand|escape:url}">{$row.brand|escape}</a> ({$row.count})</li>
+
+                        <!--{/foreach}-->
+
+                        <!-- {if $brand_count gt 10} -->
+                        <li></li>
+                        <!-- {/if} -->
+                    </ul>
+            </div>
+            <!-- {/if} -->
+
+        </div>
+         <div class="module_filter">
+            <div class="module_filter_line">
+
+              
+
+                <!-- {if !$filters.brand} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="brand" style="display:none">
+                    <ul ectype="ul_brand">
+                        <!--{foreach from=$brands item=row}-->
+                        <li><a href="javascript:void(0);" keyword="{$row.brand|escape:url}">{$row.brand|escape} ({$row.count}) </a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {/if} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="price" style="display:none">
+                    <ul ectype="ul_price">
+                        <!--{foreach from=$price_intervals item=row}-->
+                        <li><a href="javascript:void(0);" title="{$row.min} - {$row.max}">{$row.min|price} - {$row.max|price} ({$row.count})</a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {if !$filters.region_id} -->
+                <div class="contain_list" ectype="dropdown_filter_content" ecvalue="region" style="display:none">
+                    <ul ectype="ul_region">
+                        <!--{foreach from=$regions item=row}-->
+                        <li><a href="javascript:void(0);" id="{$row.region_id}" title="{$row.region_name|escape}">{$row.region_name|escape} ({$row.count})</a></li>
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+                <!-- {/if} -->
+            </div>
+        </div>
+
+
+
+        <div class="content-main-goods-list">
+
+
+
+        </div>
+        {include file=footer.html}
+    </div>
+</div>
