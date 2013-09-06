@@ -93,13 +93,14 @@ var goodsspec = new goodsspec(specs, specQty, defSpec);
                <li>
                    <label class="control-label" >参考价格:</label>
                    <label class="controls">
-                       <span class="goods-price" ectype="goods_price"> {$goods._specs.0.price|price}</span>
+                       <span class="goods-price" ectype="goods_price1"> {$goods._specs.0.price|price}</span>
                    </label>
+                   
                </li>
                 <li>
                     <label class="control-label" >货号:</label>
-                    <label class="controls">
-                        {$goods.sku|escape}
+                    <label class="controls" ectype="sku">
+                        {$goods._specs.0.sku|sku} {$goods._specs.1.sku[16]} {$goods._specs.2.sku[16]} {$goods._specs.3.sku[16]} 
                     </label>
                 </li>
                 <li>

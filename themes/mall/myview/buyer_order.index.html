@@ -68,7 +68,7 @@ $(function(){
                         <dd class="goods-container">
                             <ul class="goods-container-ul">
                                 <li class="ware_pic"><p class="ware_pic text-center"><a href="{url app=goods&id=$goods.goods_id}" target="_blank"><img src="{$goods.goods_image}" width="50" height="50"  /></a></p></li>
-                                <li class="goods_name"><p class="ware_text text-center"><a href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name|escape}</a><br /><span class="attr">{$goods.specification|escape}</span></p></li>
+                                <li class="goods_name"><p class="ware_text text-center"><a href="{url app=goods&id=$goods.goods_id}" target="_blank">{$goods.goods_name|escape}</a><br /><span style="float:right;margin-top:-36px;color:#08c;margin-right:213px;" class="attr">{$goods.specification|escape}</span></p></li>
                                 <li class="goods_price"><p class="price text-center">{$lang.price}: <span>{$goods.price|price}</span></p></li>
                                 <li class="goods_quantity"><p class="amount text-center">{$lang.quantity}: <span>{$goods.quantity}</span></p></li>
                             </ul>
