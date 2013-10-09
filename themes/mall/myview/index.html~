@@ -6,13 +6,15 @@
 
 <div id="content">
 
-    <div id="content-left" class="left">
+    <div id="content-left" class="left" style=" position: absolute">
         {include file=left_category.html}
+        
+            <img src="data/files/mall/template/201308211647302694.jpg" style=" position: absolute;
+  left: 240px;
+  top: 30px;"></img>
     </div>
     
-    <img src="themes/mall/myview/styles/default/temp_img/201308211647302694.jpg" style=" position: absolute;
-  left: 324px;
-  top: 125px;"></img>
+
   
     
     <div id="content-main">
@@ -25,10 +27,8 @@
                 <div class="my-floor my-second-floor" area="second_floor" widget_type="area"> <!--{widgets page=index area=second_floor}--> </div>
                 <div class="my-floor my-third-floor" area="third_floor" widget_type="area"> <!--{widgets page=index area=third_floor}--> </div>
                 <div class="my-floor my-fourth-floor" area="fourth_floor" widget_type="area" > <!--{widgets page=index area=fourth_floor}-->       </div>
-                <div style="position:relative"><img src="themes/mall/myview/styles/default/temp_img/201308211647302694.jpg" style=" position: absolute;
-      left:2px;
-     top: 399px;"></img>        </div>                      
-           <!--src="themes/mall/myview/styles/default/temp_img/201308232201303818.jpg"-->
+                                     
+           <!--src="data/files/mall/template/201308232201303818.jpg"-->
           
                      <!-- src="data/files/mall/template/201308232201302552.jpg"-->
         
@@ -45,11 +45,21 @@
                 <div class="other-fourth" area="other-fourth" widget_type="area"> <!--{widgets page=index area=other-fourth}--> </div>
            
                     <!--src="data/files/mall/template/201308232201303818.jpg"-->
-               <img src="data/files/mall/template/201308232201303818.jpg" style=" position: absolute;
+               <img src="data/files/mall/template/2013100817095084.jpg" style=" position: absolute;
       left: -1px;
       top: -2px;"></img>
+      
+      <img src="data/files/mall/template/2013100817095084.jpg" style=" position: absolute;
+      left: -1px;
+      top: 411px;"></img>
        
+      <img src="data/files/mall/template/2013100817095084.jpg" style=" position: absolute;
+      left: -1px;
+      top: 825px;"></img>
        
+            <img src="data/files/mall/template/2013100817095084.jpg" style=" position: absolute;
+      left: -1px;
+      top: 1238px;"></img>
              
        
        
