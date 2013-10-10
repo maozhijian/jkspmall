@@ -9,7 +9,7 @@
     <div id="content-left" class="left" style=" position: absolute">
         {include file=left_category.html}
         
-            <img src="data/files/mall/template/201308211647302694.jpg" style=" position: absolute;
+            <img src="data/files/mall/template/201310100841133144.jpg" style=" position: absolute;
   left: 240px;
   top: 30px;"></img>
     </div>
