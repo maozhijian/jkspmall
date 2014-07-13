@@ -154,8 +154,14 @@ class FrontendApp extends ECBaseApp
                 $synlogin = $ms->user->synlogin($user_id);
             }
 
+              $ret_url2=rawurldecode($_POST['ret_url']);
+            
+            if (!substr_count(($_POST['ret_url']),'index.php')) {
+            	$ret_url2='index.php';
+            }               
+
             $this->show_message(Lang::get('login_successed') . $synlogin,
-                'back_before_login', rawurldecode($_POST['ret_url']),
+                'back_before_login',$ret_url2,
                 'enter_member_center', 'index.php?app=member'
             );
         }
