@@ -32,6 +32,19 @@ $(function(){
             $(self_sub_menu).show('fast');
             //显示wrap
             $('.myassort_child_wrap_submenu').slideDown();
+            //根据category_id更改定位位置
+            switch(parseInt(category_id)){
+                case 4198:
+                $('.myassort_child_wrap').css("top","-526px");
+                break;
+                case 4497:
+                $('.myassort_child_wrap').css("top","-376px");
+                break;
+                case 4594:
+                $('.myassort_child_wrap').css("top","-490px");
+                break;
+            }
+
         });
         $(this).mouseout(function(){
             //$(_this_li).css('background',tmp_color);

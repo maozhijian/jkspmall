@@ -8,7 +8,7 @@
 
     <div id="content-left" class="left" >
             <div style="position:relative">
-            <!-- 201308211647302694  201310100841133144--><img src="data/files/mall/template/201310241652098967.jpg" style=" position: absolute;
+            <!-- 201308211647302694 201310241738077836  201310100841133144--><img src="data/files/mall/template/201311011349097877.jpg" style=" position: absolute;
   left: 240px;
   top: 30px;"></img>
          </div>
@@ -40,7 +40,7 @@
             </div>
 
             
-            <div class="other" style="position:relative">
+            <div class="other" >
                 <div class="other-first" area="other-first" widget_type="area"> <!--{widgets page=index area=other-first}--> </div>
                 <div class="other-second" area="other-second" widget_type="area"> <!--{widgets page=index area=other-second}--> </div>
                 <div class="other-third" area="other-third" widget_type="area"> <!--{widgets page=index area=other-third}--> </div>

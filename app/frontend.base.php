@@ -7,7 +7,9 @@
  *    @usage    none
  */
 class FrontendApp extends ECBaseApp
-{
+{ 
+
+	
     function __construct()
     {
         $this->FrontendApp();
@@ -32,6 +34,23 @@ class FrontendApp extends ECBaseApp
 
         $this->assign('contact_address','上海市友谊路1588弄16号楼');
         $this->assign('telephone','4001000501');
+        foreach ($data as &$_value)
+        {
+        	 
+        	foreach ($_value["children"] as &$_value2)
+        	{
+        		$_value2["children"]=NULL;
+        		if (strlen($_value2["value"])>=20&&strlen($_value2["value"])<=33) {
+        			$_value2["long"]=1;
+        		}
+        		elseif (strlen($_value2["value"])>33){
+        			$_value2["long"]=2;
+        		}
+        		else {
+        			$_value2["long"]=0;
+        		}
+        	}
+        }
         $this->assign('my_category', $data);
     }
     function FrontendApp()
@@ -81,7 +100,7 @@ class FrontendApp extends ECBaseApp
         if ($this->visitor->has_login)
         {
             $this->show_warning('has_login');
-
+            echo "<script type='text/javascript'>location.href='index.php';</script>";
             return;
         }
         if (!IS_POST)
@@ -153,15 +172,15 @@ class FrontendApp extends ECBaseApp
                 /* 同步登陆外部系统 */
                 $synlogin = $ms->user->synlogin($user_id);
             }
-
-              $ret_url2=rawurldecode($_POST['ret_url']);
+            $ret_url2=rawurldecode($_POST['ret_url']);
             
             if (!substr_count(($_POST['ret_url']),'index.php')) {
+            	echo 111111;
             	$ret_url2='index.php';
-            }               
-
+            }
+           
             $this->show_message(Lang::get('login_successed') . $synlogin,
-                'back_before_login',$ret_url2,
+                'back_before_login', $ret_url2,
                 'enter_member_center', 'index.php?app=member'
             );
         }
